@@ -65,14 +65,16 @@ Current leagues/My teams
 
 -----Pages----- 
 1. Landing page - Nick
-2. Account creation - displays form for either organizer or participate
-3. Organizer portal - 
+2. Account creation - displays form for either organizer or participant
+3. Organizer portal - Tucker
     Create a league route
     Current leagues route
 4. Participant portal - Tucker
     Search for leagues route
     Current leagues route
 5. League Search - Nick
+6. Tyler is going to do Authentication stuff
+7.
 
 <!-- 
 
@@ -82,4 +84,5 @@ Project name ideas
 - Bracket League
 - Alpha League
 - League Royale
-- A League of Your Own -->
+- A League of Your Own
+-  -->
