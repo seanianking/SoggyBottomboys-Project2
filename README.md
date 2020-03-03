@@ -74,3 +74,12 @@ Current leagues/My teams
     Current leagues route
 5. League Search - Nick
 
+<!-- 
+
+
+Project name ideas
+- League Ace
+- Bracket League
+- Alpha League
+- League Royale
+- A League of Your Own -->
