@@ -28,6 +28,17 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
+// Set Handlebars.
+var exphbs = require("express-handlebars");
+
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
+
+// Import routes and give the server access to them.
+var routes = require("./controllers/userController.js");
+
+app.use(routes);
+
 // Syncing our database and logging a message to the user upon success
 
 // db.sequelize.sync().then(function() {
