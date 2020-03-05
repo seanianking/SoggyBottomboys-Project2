@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Participant</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+  <body>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <a class="navbar-brand" href="#">League Manager</a>
+          <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+              aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="collapsibleNavId">
+              <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Contact<span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">About Us</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                      <div class="dropdown-menu" aria-labelledby="dropdownId">
+                          <a class="dropdown-item" href="#">Search for leagues</a>
+                          <a class="dropdown-item" href="#">Pay us money</a>
+                      </div>
+                  </li>
+              </ul>
+              <p>
+                <button type="button" class="btn btn-danger">Sign out</button>
+                <button type="button" class="btn btn-light" data-toggle="button" aria-pressed="false" autocomplete="off">
+                    Toggle Dark Mode
+                </button>
+              </p>
+          </div>
+      </nav>
+      <div class="jumbotron jumbotron-fluid my-0 py-4">
+          <div class="container">
+              <h1 class="display-3">Your Portal</h1>
+              <hr class="my-2">
+          </div>
+      </div>
+      <div class="container my-4" style="border: 2px solid black;">
+        <div class="row">
+            <div class="col-lg-6 px-0" style="border: 2px solid red;">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title">Find a new league to join:</h2>
+                        <p class="card-text">
+                            <div class="input-group md-form form-sm form-1 pl-0">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text purple lighten-3" id="basic-text1"><i class="fas fa-search text-white"
+                                      aria-hidden="true"></i></span>
+                                </div>
+                                <input class="form-control my-0 py-1" type="text" placeholder="Search" aria-label="Search">
+                              </div>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 px-0" style="border: 2px solid red;">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title">Want to create a new league?</h2>
+                        <p class="card-text">
+                            <button type="button" class="btn btn-secondary btn-lg btn-block">Create a league</button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+      <div class="container my-4" style="border: 2px solid black;">
+        <div class="row">
+            <div class="col-lg-12 px-0" style="border: 2px solid red;">
+                <div class="card" id="viewParticipantLeagues">
+                    <div class="card-body">
+                        <h2 class="card-title">View Current Leagues:</h2>
+                        <button class="btn btn-danger toManagedLeagues">Leagues you manage</button>
+                        <p class="card-text">
+                            <div id="carousel-example-1z" class="carousel slide" data-ride="carousel">
+                                <!--Indicators-->
+                                <ol class="carousel-indicators">
+                                  <li data-target="#carousel-example-1z" data-slide-to="0" class="active"></li>
+                                  <li data-target="#carousel-example-1z" data-slide-to="1"></li>
+                                  <li data-target="#carousel-example-1z" data-slide-to="2"></li>
+                                </ol>
+                                <!--/.Indicators-->
+                                <!--Slides-->
+                                <div class="carousel-inner" role="listbox">
+                                  <!--First slide-->
+                                  <div class="carousel-item active">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h4 class="card-title">League 1</h4>
+                                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt velit quae incidunt soluta. Fugit corrupti rem ut incidunt quod ipsa inventore ex modi vero, officia repudiandae praesentium optio veritatis eum?</p>
+                                                    <a href="#" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">League page</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h4 class="card-title">League 2</h4>
+                                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit perferendis vitae laborum non accusamus deserunt, ab eaque numquam vero cumque porro illo inventore consectetur quas ducimus perspiciatis nesciunt impedit alias!</p>
+                                                    <a href="#" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">League page</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h4 class="card-title">League 3</h4>
+                                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, sapiente. Expedita, repellendus! Voluptas, commodi! Ipsum ipsa quidem explicabo, nisi itaque iure dolorem voluptatem aspernatur eius perferendis iste velit, debitis hic.</p>
+                                                    <a href="#" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">League page</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h4 class="card-title">League 4</h4>
+                                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum atque, harum voluptate quo, dolorem temporibus veniam delectus officia et veritatis eius. Repudiandae vero, neque beatae velit eveniet doloribus repellendus adipisci.</p>
+                                                    <a href="#" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">League page</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  </div>
+                                  <!--/First slide-->
+                                  <!--Second slide-->
+                                  <div class="carousel-item">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h4 class="card-title">League 5</h4>
+                                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt velit quae incidunt soluta. Fugit corrupti rem ut incidunt quod ipsa inventore ex modi vero, officia repudiandae praesentium optio veritatis eum?</p>
+                                                    <a href="#" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">League page</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h4 class="card-title">League 6</h4>
+                                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit perferendis vitae laborum non accusamus deserunt, ab eaque numquam vero cumque porro illo inventore consectetur quas ducimus perspiciatis nesciunt impedit alias!</p>
+                                                    <a href="#" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">League page</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h4 class="card-title">League 7</h4>
+                                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, sapiente. Expedita, repellendus! Voluptas, commodi! Ipsum ipsa quidem explicabo, nisi itaque iure dolorem voluptatem aspernatur eius perferendis iste velit, debitis hic.</p>
+                                                    <a href="#" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">League page</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h4 class="card-title">League 8</h4>
+                                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum atque, harum voluptate quo, dolorem temporibus veniam delectus officia et veritatis eius. Repudiandae vero, neque beatae velit eveniet doloribus repellendus adipisci.</p>
+                                                    <a href="#" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">League page</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  </div>
+                                  <!--/Third slide-->
+                                </div>
+                                <!--/.Slides-->
+                                <!--Controls-->
+                                <a class="carousel-control-prev" href="#carousel-example-1z" role="button" data-slide="prev">
+                                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                  <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="carousel-control-next" href="#carousel-example-1z" role="button" data-slide="next">
+                                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                  <span class="sr-only">Next</span>
+                                </a>
+                                <!--/.Controls-->
+                              </div>
+                        </p>
+                    </div>
+                </div>
+                <div class="card hide" id="viewManagerLeagues">
+                    <div class="card-body">
+                        <h2 class="card-title">Leagues you manage:</h2>
+                        <button class="btn btn-danger toParticipantLeagues">To Your Leagues</button>
+                        <p class="card-text">
+                            <div class="col-md-3">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="card-title">League 8</h4>
+                                        <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum atque, harum voluptate quo, dolorem temporibus veniam delectus officia et veritatis eius. Repudiandae vero, neque beatae velit eveniet doloribus repellendus adipisci.</p>
+                                        <a href="#" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">League page</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+      <footer class="page-footer font-small cyan darken-3">
+        <div class="footer-copyright text-center py-3">© 2020 Copyright:
+          <a href="https://mdbootstrap.com/"> Soggybottomboys.com</a>
+        </div>
+      </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+        
+        $('.carousel').carousel('pause');
+        $('.toManagedLeagues').on("click", function(){
+            $('#viewParticipantLeagues').addClass("hide");
+            $('#viewManagerLeagues').removeClass("hide");
+        });
+        $('.toParticipantLeagues').on("click", function(){
+            $('#viewManagerLeagues').addClass("hide");
+            $('#viewParticipantLeagues').removeClass("hide");
+        });
+    </script>
+</body>
+</html>
