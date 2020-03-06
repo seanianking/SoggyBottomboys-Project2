@@ -10,8 +10,19 @@ router.get("/", function(req, res) {
 });
 
 // Portal page route
+router.get("/signup", function(req, res) {
+  res.render("signup");
+});
+
+// Portal page route
 router.get("/portal", function(req, res) {
   res.render("portal");
+});
+
+// Logs out user
+router.get("/logout", function(req, res) {
+  req.logout();
+  res.redirect("/");
 });
 
 module.exports = router;
