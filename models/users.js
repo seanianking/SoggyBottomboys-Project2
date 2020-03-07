@@ -26,6 +26,7 @@ const users = sequelize.define("users", {
     createdAt: Sequelize.DATE,
     updatedAt: Sequelize.DATE,
 })
+return users;
 };
 // CREATE TABLE users(
 // 	id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
