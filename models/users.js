@@ -1,10 +1,8 @@
-import { Sequelize } from ".";
-
 module.exports = function(sequelize, DataTypes) {
 
 const users = sequelize.define("users", {
     Email: {
-        Type:Sequelize.STRING,
+        Type:DataTypes.STRING,
         validate:{
             isEmail: true,
             notIn: [["users"]],
@@ -15,7 +13,7 @@ const users = sequelize.define("users", {
         },
     },
     password:{
-        type: Sequelize.STRING,
+        type: DataTypes.STRING,
         validate:{
             min: 8,
             notNull: true,
@@ -23,8 +21,8 @@ const users = sequelize.define("users", {
     },
    
 //TIMESTAMPS
-    createdAt: Sequelize.DATE,
-    updatedAt: Sequelize.DATE,
+    createdAt: DataTypes.DATE,
+    updatedAt: DataTypes.DATE,
 })
 return users;
 };

@@ -1,18 +1,18 @@
 module.exports = function(sequelize, DataTypes) {
 
-    const users = sequelize.define("users", {
+    const announcement = sequelize.define("announcement", {
         announcement: {
-            Type: Sequelize.STRING,
+            Type: DataTypes.STRING,
             allowNull: false,
         },
         league: {
-            Type: Sequelize.INT,
+            Type: DataTypes.INT,
             allowNull: false,
         },
        
     //TIMESTAMPS
-        createdAt: Sequelize.DATE,
-        updatedAt: Sequelize.DATE,
+        createdAt: DataTypes.DATE,
+        updatedAt: DataTypes.DATE,
     })
     announcement.associate = (models) => {
         announcement.belongsTo(models.league);

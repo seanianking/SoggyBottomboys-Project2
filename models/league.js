@@ -2,37 +2,37 @@ module.exports = function(sequelize, DataTypes) {
 
     const league = sequelize.define("league", {
         league: {
-            Type:Sequelize.STRING,
+            Type:DataTypes.STRING,
             validate:{
                 notNull: true,
             },        
         },
         sport:{
-            type: Sequelize.STRING,
+            type: DataTypes.STRING,
         },
         age_range:{
-            Type: Sequelize.INT,
+            Type: DataTypes.INT,
             allowNull: false,
         },
         city: {
-            Type: Sequelize.STRING,
+            Type: DataTypes.STRING,
             allowNull: false,
         },
         state: {
-            Type: Sequelize.STRING,
+            Type: DataTypes.STRING,
             allowNull: false,
         },
         location: {
-            Type: Sequelize.STRING,
+            Type: DataTypes.STRING,
             allowNull: false,
         },
         announcement: {
-            Type: Sequelize.INT,
+            Type: DataTypes.INT,
         },
        
     //TIMESTAMPS
-        createdAt: Sequelize.DATE,
-        updatedAt: Sequelize.DATE,
+        createdAt: DataTypes.DATE,
+        updatedAt: DataTypes.DATE,
     })
     league.associate = (models) => {
         league.belongsTo(models.announcements);

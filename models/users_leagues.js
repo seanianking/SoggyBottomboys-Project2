@@ -2,19 +2,19 @@ module.exports = function(sequelize, DataTypes) {
 
     const users_leagues = sequelize.define("users_leagues", {
         users: {
-            Type:Sequelize.INT,
+            Type:DataTypes.INT,
             validate:{
                 notNull: true,
             },
         },
         leagues:{
-            type:Sequelize.INT,
+            type:DataTypes.INT,
             validate: {
                 notNull:true,
             }
         },
         admin:{
-            type: Sequelize.BOOLEAN,
+            type: DataTypes.BOOLEAN,
             validate: {
                 notNull:true,
             }
