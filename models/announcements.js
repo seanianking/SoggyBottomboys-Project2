@@ -14,10 +14,10 @@ module.exports = function(sequelize, DataTypes) {
         createdAt: Sequelize.DATE,
         updatedAt: Sequelize.DATE,
     })
-    league.associate = (models) => {
-        league.belongsTo(models.announcements);
+    announcement.associate = (models) => {
+        announcement.belongsTo(models.league);
     };
-    return league;
+    return announcement;
     };
 
 

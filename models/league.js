@@ -37,6 +37,7 @@ module.exports = function(sequelize, DataTypes) {
     league.associate = (models) => {
         league.belongsTo(models.announcements);
     }
+    
     };
 
 
