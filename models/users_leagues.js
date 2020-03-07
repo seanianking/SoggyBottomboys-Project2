@@ -1,30 +1,24 @@
 module.exports = function(sequelize, DataTypes) {
 
-    const users_leagues = sequelize.define("users_leagues", {
+    const UsersLeagues = sequelize.define("UsersLeagues", {
         users: {
-            Type:DataTypes.INT,
-            validate:{
-                notNull: true,
-            },
+            type:DataTypes.INTEGER,
+            allowNull: false,
         },
         leagues:{
-            type:DataTypes.INT,
-            validate: {
-                notNull:true,
-            }
+            type:DataTypes.INTEGER,
+            allowNull: false,
         },
         admin:{
             type: DataTypes.BOOLEAN,
-            validate: {
-                notNull:true,
-            }
+            allowNull:false,
         },
     })
-    users_leagues.associate = (models) => {
-        users_leagues.belongsTo(models.users);
-        users_leagues.belongsTo(models.league);
+    UsersLeagues.associate = (models) => {
+        UsersLeagues.belongsTo(models.Users);
+        UsersLeagues.belongsTo(models.League);
     };
-        return users_leagues;
+        return UsersLeagues;
     };
 
 // CREATE TABLE users_leagues(

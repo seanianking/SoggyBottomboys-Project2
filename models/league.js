@@ -1,43 +1,41 @@
 module.exports = function(sequelize, DataTypes) {
 
-    const league = sequelize.define("league", {
-        league: {
-            Type:DataTypes.STRING,
-            validate:{
-                notNull: true,
-            },        
+    var League = sequelize.define("League", {
+        league_name: {
+            type:DataTypes.STRING,
+            allowNull:false,       
         },
         sport:{
             type: DataTypes.STRING,
+            allowNull:false,
         },
         age_range:{
-            Type: DataTypes.INT,
+            type: DataTypes.INTEGER,
             allowNull: false,
         },
         city: {
-            Type: DataTypes.STRING,
+            type: DataTypes.STRING,
             allowNull: false,
         },
         state: {
-            Type: DataTypes.STRING,
+            type: DataTypes.STRING,
             allowNull: false,
         },
         location: {
-            Type: DataTypes.STRING,
+            type: DataTypes.STRING,
             allowNull: false,
-        },
-        announcement: {
-            Type: DataTypes.INT,
         },
        
     //TIMESTAMPS
         createdAt: DataTypes.DATE,
         updatedAt: DataTypes.DATE,
     })
-    league.associate = (models) => {
-        league.belongsTo(models.announcements);
+    League.associate = (models) => {
+        League.hasMany(models.Announcement, {
+            onDelete: "CASCADE"
+        });
     }
-    return league;
+    return League;
     };
 
 

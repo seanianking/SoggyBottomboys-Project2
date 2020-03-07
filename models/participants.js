@@ -1,24 +1,24 @@
 module.exports = function(sequelize, DataTypes) {
 
-    const participants = sequelize.define("participants", {
+    const Participants = sequelize.define("Participants", {
         first_name: {
-            Type:DataTypes.STRING,
+            type:DataTypes.STRING,
         },
         last_name: {
-            Type:DataTypes.STRING,
+            type:DataTypes.STRING,
         },
         age:{
-            Type: DataTypes.INT,
+            type: DataTypes.INTEGER,
         },
         position: {
-            Type: DataTypes.STRING,
+            type: DataTypes.STRING,
         },
        
     //TIMESTAMPS
         createdAt: DataTypes.DATE,
         updatedAt: DataTypes.DATE,
     })
-    return participants;
+    return Participants;
     };
 
 
