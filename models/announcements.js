@@ -3,6 +3,10 @@ module.exports = function(sequelize, DataTypes) {
     const announcement = sequelize.define("announcement", {
         announcement: {
             Type: DataTypes.STRING,
+            allowNull:false,
+        },
+        type_of_event: {
+            Type: DataTypes.STRING,
             allowNull: false,
         },
         league: {
