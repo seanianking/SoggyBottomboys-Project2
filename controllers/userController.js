@@ -9,7 +9,7 @@ router.get("/", function(req, res) {
   res.render("landing");
 });
 
-// Portal page route
+// signup page route
 router.get("/signup", function(req, res) {
   res.render("signup");
 });
@@ -17,6 +17,10 @@ router.get("/signup", function(req, res) {
 // Portal page route
 router.get("/portal", function(req, res) {
   res.render("portal");
+});
+
+router.get("/league-home", function(req, res) {
+  res.render("league-home");
 });
 
 // Logs out user
