@@ -2,22 +2,16 @@ module.exports = function(sequelize, DataTypes) {
 
     const users_leagues = sequelize.define("users_leagues", {
         users: {
-            Type:DataTypes.INT,
-            validate:{
-                notNull: true,
-            },
+            type:DataTypes.INTEGER,
+            allowNull: false,
         },
         leagues:{
-            type:DataTypes.INT,
-            validate: {
-                notNull:true,
-            }
+            type:DataTypes.INTEGER,
+            allowNull: false,
         },
         admin:{
             type: DataTypes.BOOLEAN,
-            validate: {
-                notNull:true,
-            }
+            allowNull:false,
         },
     })
     users_leagues.associate = (models) => {

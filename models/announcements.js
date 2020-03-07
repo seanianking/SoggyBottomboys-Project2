@@ -2,15 +2,15 @@ module.exports = function(sequelize, DataTypes) {
 
     const announcement = sequelize.define("announcement", {
         announcement: {
-            Type: DataTypes.STRING,
+            type: DataTypes.STRING,
             allowNull:false,
         },
         type_of_event: {
-            Type: DataTypes.STRING,
+            type: DataTypes.STRING,
             allowNull: false,
         },
         league: {
-            Type: DataTypes.INT,
+            type: DataTypes.INTEGER,
             allowNull: false,
         },
        
@@ -19,7 +19,11 @@ module.exports = function(sequelize, DataTypes) {
         updatedAt: DataTypes.DATE,
     })
     announcement.associate = (models) => {
-        announcement.belongsTo(models.league);
+        announcement.belongsTo(models.league, {
+            foreignKey: {
+                allowNull: false,
+            }
+        });
     };
     return announcement;
     };

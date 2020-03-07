@@ -2,10 +2,9 @@ module.exports = function(sequelize, DataTypes) {
 
 const users = sequelize.define("users", {
     Email: {
-        Type:DataTypes.STRING,
+        type:DataTypes.STRING,
         validate:{
             isEmail: true,
-            notIn: [["users"]],
         }, 
         unique: {
             args: true,
@@ -14,9 +13,9 @@ const users = sequelize.define("users", {
     },
     password:{
         type: DataTypes.STRING,
+        allowNull: false,
         validate:{
             min: 8,
-            notNull: true,
         }
     },
    
