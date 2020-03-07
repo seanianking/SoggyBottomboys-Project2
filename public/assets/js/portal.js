@@ -7,3 +7,4 @@ $(".toParticipantLeagues").on("click", function() {
   $("#viewManagerLeagues").addClass("hide");
   $("#viewParticipantLeagues").removeClass("hide");
 });
+
