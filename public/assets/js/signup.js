@@ -31,7 +31,7 @@ $(document).ready(function() {
     }
 
     function handleLoginErr() {
-      $("#alert .msg").text(err.responseJSON);
+      //   $("#alert .msg").text(err.responseJSON);
       $("#alert").fadeIn(500);
     }
   });
