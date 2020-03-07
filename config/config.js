@@ -2,7 +2,7 @@ module.exports = {
   development: {
     username: "root",
     password: process.env.MYSQL_PASSWORD,
-    database: "passport_loginDB",
+    database: "soggy_bottomDB",
     host: "127.0.0.1",
     dialect: "mysql",
     operatorsAliases: false
