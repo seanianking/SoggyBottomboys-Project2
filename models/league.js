@@ -1,6 +1,6 @@
 module.exports = function(sequelize, DataTypes) {
 
-    const league = sequelize.define("league", {
+    var League = sequelize.define("League", {
         league_name: {
             type:DataTypes.STRING,
             allowNull:false,       
@@ -25,20 +25,17 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        announcement: {
-            type: DataTypes.INTEGER,
-        },
        
     //TIMESTAMPS
         createdAt: DataTypes.DATE,
         updatedAt: DataTypes.DATE,
     })
-    league.associate = (models) => {
-        league.hasMany(models.announcements, {
-            onDelete: "cascade"
+    League.associate = (models) => {
+        League.hasMany(models.Announcement, {
+            onDelete: "CASCADE"
         });
     }
-    return league;
+    return League;
     };
 
 

@@ -1,6 +1,6 @@
 module.exports = function(sequelize, DataTypes) {
 
-    const participants = sequelize.define("participants", {
+    const Participants = sequelize.define("Participants", {
         first_name: {
             type:DataTypes.STRING,
         },
@@ -18,7 +18,7 @@ module.exports = function(sequelize, DataTypes) {
         createdAt: DataTypes.DATE,
         updatedAt: DataTypes.DATE,
     })
-    return participants;
+    return Participants;
     };
 
 

@@ -1,6 +1,6 @@
 module.exports = function(sequelize, DataTypes) {
 
-    const users_leagues = sequelize.define("users_leagues", {
+    const UsersLeagues = sequelize.define("UsersLeagues", {
         users: {
             type:DataTypes.INTEGER,
             allowNull: false,
@@ -14,11 +14,11 @@ module.exports = function(sequelize, DataTypes) {
             allowNull:false,
         },
     })
-    users_leagues.associate = (models) => {
-        users_leagues.belongsTo(models.users);
-        users_leagues.belongsTo(models.league);
+    UsersLeagues.associate = (models) => {
+        UsersLeagues.belongsTo(models.Users);
+        UsersLeagues.belongsTo(models.League);
     };
-        return users_leagues;
+        return UsersLeagues;
     };
 
 // CREATE TABLE users_leagues(

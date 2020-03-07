@@ -1,6 +1,6 @@
 module.exports = function(sequelize, DataTypes) {
 
-const users = sequelize.define("users", {
+const Users = sequelize.define("Users", {
     Email: {
         type:DataTypes.STRING,
         validate:{
@@ -23,7 +23,7 @@ const users = sequelize.define("users", {
     createdAt: DataTypes.DATE,
     updatedAt: DataTypes.DATE,
 })
-return users;
+return Users;
 };
 // CREATE TABLE users(
 // 	id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
