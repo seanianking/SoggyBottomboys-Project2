@@ -27,29 +27,6 @@ module.exports = function(sequelize, DataTypes) {
         return users_leagues;
     };
 
-
-
-
-    // module.exports = function(sequelize, DataTypes) {
-    //     var Depts_Emps = sequelize.define(“Depts_Emps”, {
-    //       depEmpFromDate: {
-    //         type: DataTypes.DATEONLY,
-    //         allowNull: false
-    //       },
-    //       depEmpToDate: {
-    //         type: DataTypes.DATEONLY
-    //       }
-    //     },
-    //     {
-    //       paranoid: true
-    //     })
-    //     Depts_Emps.associate = (models) => {
-    //       Depts_Emps.belongsTo(models.Departments);
-    //       Depts_Emps.belongsTo(models.Employees);
-    //     };
-    //       return Depts_Emps;
-    //   };
-
 // CREATE TABLE users_leagues(
 //     id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
 //     user INT NOT NULL REFERENCES users(id),
