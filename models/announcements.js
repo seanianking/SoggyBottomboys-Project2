@@ -1,22 +1,23 @@
 module.exports = function(sequelize, DataTypes) {
 
     const users = sequelize.define("users", {
-        Email: {
-            Type:Sequelize.STRING,
-               
+        announcement: {
+            Type: Sequelize.STRING,
+            allowNull: false,
         },
-        password:{
-            type: Sequelize.STRING,
-            validate:{
-                min: 8,
-                notNull: true,
-            }
+        league: {
+            Type: Sequelize.INT,
+            allowNull: false,
         },
        
     //TIMESTAMPS
         createdAt: Sequelize.DATE,
         updatedAt: Sequelize.DATE,
     })
+    league.associate = (models) => {
+        league.belongsTo(models.announcements);
+    };
+    return league;
     };
 
 
