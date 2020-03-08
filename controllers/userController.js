@@ -10,6 +10,7 @@ router.get("/", function(req, res) {
   res.render("landing");
 });
 
+// Login route
 router.post("/", passport.authenticate("local"), function(req, res) {
   res.json(req.user);
 });
@@ -19,6 +20,7 @@ router.get("/signup", function(req, res) {
   res.render("signup");
 });
 
+// Signup page post route
 router.post("/api/signup", function(req, res) {
   db.Users.create({
     email: req.body.email,
