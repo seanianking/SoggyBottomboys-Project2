@@ -20,7 +20,7 @@ router.get("/signup", function(req, res) {
 });
 
 router.post("/api/signup", function(req, res) {
-  db.User.create({
+  db.Users.create({
     email: req.body.email,
     password: req.body.password
   })
