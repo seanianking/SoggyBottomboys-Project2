@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(function() {
   $(".carousel").carousel("pause");
   $(".toManagedLeagues").on("click", function() {
     console.log("To Managed leagues clicked");
@@ -10,8 +10,8 @@ $(document).ready(function(){
     $("#viewManagerLeagues").addClass("hide");
     $("#viewParticipantLeagues").removeClass("hide");
   });
-  
-  $(".leaguePageBtn").on("click", function(){
+
+  $(".leaguePageBtn").on("click", function() {
     location.href = "/league-home";
   });
 
