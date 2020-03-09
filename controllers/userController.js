@@ -41,6 +41,10 @@ router.get("/league-home", function(req, res) {
   res.render("league-home");
 });
 
+router.get("/league-search", function(req, res) {
+  res.render("league-search");
+});
+
 // Logs out user
 router.get("/logout", function(req, res) {
   req.logout();

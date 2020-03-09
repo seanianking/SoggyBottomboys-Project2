@@ -14,4 +14,9 @@ $(document).ready(function(){
   $(".leaguePageBtn").on("click", function(){
     location.href = "/league-home";
   });
+
+  $("#toLeagueSearch").on("click", function(){
+    location.href = "/league-search";
+  });
+
 });
