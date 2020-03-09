@@ -1,10 +1,10 @@
 <div class="jumbotron jumbotron-fluid my-0 py-4">
-        <div class="container">
-            <h1 class="display-3">Your Portal</h1>
-            <hr class="my-2">
-        </div>
+    <div class="container">
+        <h1 class="display-3">Your Portal</h1>
+        <hr class="my-2">
     </div>
-    <div class="container my-4" style="border: 2px solid black;">
+</div>
+<div class="container my-4" style="border: 2px solid black;">
     <div class="row">
         <div class="col-lg-6 px-0" style="border: 2px solid red;">
             <div class="card">
@@ -13,11 +13,11 @@
                     <p class="card-text">
                         <div class="input-group md-form form-sm form-1 pl-0">
                             <div class="input-group-prepend">
-                                <span class="input-group-text purple lighten-3" id="basic-text1"><i class="fas fa-search text-white"
-                                    aria-hidden="true"></i></span>
+                                <span class="input-group-text purple lighten-3" id="basic-text1"><i
+                                        class="fas fa-search text-white" aria-hidden="true"></i></span>
                             </div>
                             <input class="form-control my-0 py-1" type="text" placeholder="Search" aria-label="Search">
-                            </div>
+                        </div>
                     </p>
                 </div>
             </div>
@@ -27,14 +27,15 @@
                 <div class="card-body">
                     <h2 class="card-title">Want to create a new league?</h2>
                     <p class="card-text">
-                        <button type="button" class="btn btn-secondary btn-lg btn-block">Create a league</button>
+                        <button type="button" class="btn btn-secondary btn-lg btn-block" data-toggle="modal"
+                            data-target="#league-modal">Create a league</button>
                     </p>
                 </div>
             </div>
         </div>
     </div>
-    </div>
-    <div class="container my-4" style="border: 2px solid black;">
+</div>
+<div class="container my-4" style="border: 2px solid black;">
     <div class="row">
         <div class="col-lg-12 px-0" style="border: 2px solid red;">
             <div class="card" id="viewParticipantLeagues">
@@ -52,81 +53,111 @@
                             <div class="carousel-inner" role="listbox">
                                 <!--First slide-->
                                 <div class="carousel-item active">
-                                <div class="row justify-content-center">
-                                    <div class="col-md-3">
-                                        <div class="card">
-                                            <div class="card-body">
-                                                <h4 class="card-title">League 1</h4>
-                                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt velit quae incidunt soluta. Fugit corrupti rem ut incidunt quod ipsa inventore ex modi vero, officia repudiandae praesentium optio veritatis eum?</p>
-                                                <a   class="btn btn-secondary btn-lg active leaguePageBtn" role="button" aria-pressed="true">League page</a>
+                                    <div class="row justify-content-center">
+                                        <div class="col-md-3">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h4 class="card-title">League 1</h4>
+                                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur
+                                                        adipisicing elit. Sunt velit quae incidunt soluta. Fugit
+                                                        corrupti rem ut incidunt quod ipsa inventore ex modi vero,
+                                                        officia repudiandae praesentium optio veritatis eum?</p>
+                                                    <a class="btn btn-secondary btn-lg active leaguePageBtn"
+                                                        role="button" aria-pressed="true">League page</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h4 class="card-title">League 2</h4>
+                                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur
+                                                        adipisicing elit. Suscipit perferendis vitae laborum non
+                                                        accusamus deserunt, ab eaque numquam vero cumque porro illo
+                                                        inventore consectetur quas ducimus perspiciatis nesciunt impedit
+                                                        alias!</p>
+                                                    <a class="btn btn-secondary btn-lg active leaguePageBtn"
+                                                        role="button" aria-pressed="true">League page</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h4 class="card-title">League 3</h4>
+                                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur
+                                                        adipisicing elit. Voluptates, sapiente. Expedita, repellendus!
+                                                        Voluptas, commodi! Ipsum ipsa quidem explicabo, nisi itaque iure
+                                                        dolorem voluptatem aspernatur eius perferendis iste velit,
+                                                        debitis hic.</p>
+                                                    <a class="btn btn-secondary btn-lg active leaguePageBtn"
+                                                        role="button" aria-pressed="true">League page</a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-3">
-                                        <div class="card">
-                                            <div class="card-body">
-                                                <h4 class="card-title">League 2</h4>
-                                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit perferendis vitae laborum non accusamus deserunt, ab eaque numquam vero cumque porro illo inventore consectetur quas ducimus perspiciatis nesciunt impedit alias!</p>
-                                                <a   class="btn btn-secondary btn-lg active leaguePageBtn" role="button" aria-pressed="true">League page</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="card">
-                                            <div class="card-body">
-                                                <h4 class="card-title">League 3</h4>
-                                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, sapiente. Expedita, repellendus! Voluptas, commodi! Ipsum ipsa quidem explicabo, nisi itaque iure dolorem voluptatem aspernatur eius perferendis iste velit, debitis hic.</p>
-                                                <a   class="btn btn-secondary btn-lg active leaguePageBtn" role="button" aria-pressed="true">League page</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
                                 </div>
                                 <!--/First slide-->
                                 <!--Second slide-->
                                 <div class="carousel-item">
-                                <div class="row justify-content-center">
-                                    <div class="col-md-3">
-                                        <div class="card">
-                                            <div class="card-body">
-                                                <h4 class="card-title">League 4</h4>
-                                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt velit quae incidunt soluta. Fugit corrupti rem ut incidunt quod ipsa inventore ex modi vero, officia repudiandae praesentium optio veritatis eum?</p>
-                                                <a   class="btn btn-secondary btn-lg active leaguePageBtn" role="button" aria-pressed="true">League page</a>
+                                    <div class="row justify-content-center">
+                                        <div class="col-md-3">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h4 class="card-title">League 4</h4>
+                                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur
+                                                        adipisicing elit. Sunt velit quae incidunt soluta. Fugit
+                                                        corrupti rem ut incidunt quod ipsa inventore ex modi vero,
+                                                        officia repudiandae praesentium optio veritatis eum?</p>
+                                                    <a class="btn btn-secondary btn-lg active leaguePageBtn"
+                                                        role="button" aria-pressed="true">League page</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h4 class="card-title">League 5</h4>
+                                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur
+                                                        adipisicing elit. Suscipit perferendis vitae laborum non
+                                                        accusamus deserunt, ab eaque numquam vero cumque porro illo
+                                                        inventore consectetur quas ducimus perspiciatis nesciunt impedit
+                                                        alias!</p>
+                                                    <a class="btn btn-secondary btn-lg active leaguePageBtn"
+                                                        role="button" aria-pressed="true">League page</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h4 class="card-title">League 6</h4>
+                                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur
+                                                        adipisicing elit. Voluptates, sapiente. Expedita, repellendus!
+                                                        Voluptas, commodi! Ipsum ipsa quidem explicabo, nisi itaque iure
+                                                        dolorem voluptatem aspernatur eius perferendis iste velit,
+                                                        debitis hic.</p>
+                                                    <a class="btn btn-secondary btn-lg active leaguePageBtn"
+                                                        role="button" aria-pressed="true">League page</a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-3">
-                                        <div class="card">
-                                            <div class="card-body">
-                                                <h4 class="card-title">League 5</h4>
-                                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit perferendis vitae laborum non accusamus deserunt, ab eaque numquam vero cumque porro illo inventore consectetur quas ducimus perspiciatis nesciunt impedit alias!</p>
-                                                <a   class="btn btn-secondary btn-lg active leaguePageBtn" role="button" aria-pressed="true">League page</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="card">
-                                            <div class="card-body">
-                                                <h4 class="card-title">League 6</h4>
-                                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, sapiente. Expedita, repellendus! Voluptas, commodi! Ipsum ipsa quidem explicabo, nisi itaque iure dolorem voluptatem aspernatur eius perferendis iste velit, debitis hic.</p>
-                                                <a   class="btn btn-secondary btn-lg active leaguePageBtn" role="button" aria-pressed="true">League page</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
                                 </div>
                                 <!--/Third slide-->
                             </div>
-                            <a class="carousel-control-prev" href="#carousel-example-1z" role="button" data-slide="prev">
+                            <a class="carousel-control-prev" href="#carousel-example-1z" role="button"
+                                data-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                 <span class="sr-only">Previous</span>
                             </a>
-                            <a class="carousel-control-next" href="#carousel-example-1z" role="button" data-slide="next">
+                            <a class="carousel-control-next" href="#carousel-example-1z" role="button"
+                                data-slide="next">
                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                 <span class="sr-only">Next</span>
                             </a>
                             <!--/.Controls-->
-                            </div>
+                        </div>
                     </p>
                 </div>
             </div>
@@ -139,8 +170,12 @@
                             <div class="card">
                                 <div class="card-body">
                                     <h4 class="card-title">League 8</h4>
-                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum atque, harum voluptate quo, dolorem temporibus veniam delectus officia et veritatis eius. Repudiandae vero, neque beatae velit eveniet doloribus repellendus adipisci.</p>
-                                    <a   class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">League page</a>
+                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                        Laborum atque, harum voluptate quo, dolorem temporibus veniam delectus officia
+                                        et veritatis eius. Repudiandae vero, neque beatae velit eveniet doloribus
+                                        repellendus adipisci.</p>
+                                    <a class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">League
+                                        page</a>
                                 </div>
                             </div>
                         </div>
@@ -149,4 +184,116 @@
             </div>
         </div>
     </div>
-    </div>    
+</div>
+
+
+<!-- Create League Modal -->
+<div class="modal fade" id="league-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Create League</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <label for="league-name">League Name</label>
+                            <input type="text" class="form-control" id="league-name" placeholder="League Name">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputSport">Sport</label>
+                        <input type="text" class="form-control" id="sport-name" placeholder="Sport">
+                    </div>
+                    <div class="form-group">
+                        <label for="age-range">Age Range</label>
+                        <select class="form-control">
+                            <option>5-7</option>
+                            <option>8-10</option>
+                            <option>11-13</option>
+                            <option>14-17</option>
+                            <option>18+</option>
+                            <option>Senior</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputCity">City</label>
+                            <input type="text" class="form-control" id="inputCity" placeholder="city">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputState">State</label>
+                            <select id="inputState" class="form-control">
+                                <option value="">Alabama - AL</option>
+                                <option value="">Alaska - AK</option>
+                                <option value="">Arizona - AZ</option>
+                                <option value="">Arkansas - AR</option>
+                                <option value="">California - CA</option>
+                                <option value="">Colorado - CO</option>
+                                <option value="">Connecticut - CT</option>
+                                <option value="">Delaware - DE</option>
+                                <option value="">Florida - FL</option>
+                                <option value="">Georgia - GA</option>
+                                <option value="">Hawaii - HI</option>
+                                <option value="">Idaho - ID</option>
+                                <option value="">Illinois - IL</option>
+                                <option value="">Indiana - IN</option>
+                                <option value="">Iowa - IA</option>
+                                <option value="">Kansas - KS</option>
+                                <option value="">Kentucky - KY</option>
+                                <option value="">Louisiana - LA</option>
+                                <option value="">Maine - ME</option>
+                                <option value="">Maryland - MD</option>
+                                <option value="">Massachusetts - MA</option>
+                                <option value="">Michigan - MI</option>
+                                <option value="">Minnesota - MN</option>
+                                <option value="">Mississippi - MS</option>
+                                <option value="">Missouri - MO</option>
+                                <option value="">Montana - MT</option>
+                                <option value="">Nebraska - NE</option>
+                                <option value="">Nevada - NV</option>
+                                <option value="">New Hampshire - NH</option>
+                                <option value="">New Jersey - NJ</option>
+                                <option value="">New Mexico - NM</option>
+                                <option value="">New York - NY</option>
+                                <option value="">North Carolina - NC</option>
+                                <option value="">North Dakota - ND</option>
+                                <option value="">Ohio - OH</option>
+                                <option value="">Oklahoma - OK</option>
+                                <option value="">Oregon - OR</option>
+                                <option value="">Pennsylvania - PA</option>
+                                <option value="">Rhode Island - RI</option>
+                                <option value="">South Carolina - SC</option>
+                                <option value="">South Dakota - SD</option>
+                                <option value="">Tennessee - TN</option>
+                                <option value="">Texas - TX</option>
+                                <option value="">Utah - UT</option>
+                                <option value="">Vermont - VT</option>
+                                <option value="">Virginia - VA</option>
+                                <option value="">Washington - WA</option>
+                                <option value="">West Virginia - WV</option>
+                                <option value="">Wisconsin - WI</option>
+                                <option value="">Wyoming - WY</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <label for="inputCity">Location</label>
+                            <input type="text" class="form-control" id="inputLocation" placeholder="Enter Location">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
