@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Participant</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+  <body>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <a class="navbar-brand" href="#">League Manager</a>
+          <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+              aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="collapsibleNavId">
+              <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Contact<span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">About Us</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                      <div class="dropdown-menu" aria-labelledby="dropdownId">
+                          <a class="dropdown-item" href="#">Search for leagues</a>
+                          <a class="dropdown-item" href="#">Pay us money</a>
+                      </div>
+                  </li>
+              </ul>
+              <p>
+                <button type="button" class="btn btn-danger">Sign out</button>
+                <button type="button" class="btn btn-light" data-toggle="button" aria-pressed="false" autocomplete="off">
+                    Toggle Dark Mode
+                </button>
+              </p>
+          </div>
+      </nav>
+      <div class="jumbotron jumbotron-fluid my-0 py-4">
+          <div class="container">
+              <h1 class="display-3">Search for a league</h1>
+              <hr class="my-2">
+          </div>
+      </div>
+      <div class="container-fluid d-flex h-100 flex-column my-4">
+        <div class="row justify-content-center">
+            <div class="col-lg-2 mx-4" style="border: 2px solid red; ">
+                <div class="row">
+                    <div class="col p-2" style="background-color: #E9ECEF; border-bottom: 2px solid black;">
+                        <h4>
+                            League Criteria
+                        </h4>
+                    </div>
+                </div>
+                <div class="row justify-content-center py-4">
+                    <div class="col-md-10">
+                        <form action="">
+                            <div class="row">
+                                <div class="col">
+                                    <input class="form-control" type="text" placeholder="Search League Name" aria-label="Search">
+                                </div>
+                            </div>
+                            <div class="row py-2">
+                                <div class="col">
+                                    <ul class="list-group">
+                                        <li class="list-group-item">
+                                            <label for="form-control">Gender</label>
+                                            <select class="form-control">
+                                                <option value="one">Boy</option>
+                                                <option value="two">Girl</option>
+                                            </select>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <label for="dropdown-toggle">Sports</label>
+                                            <a data-toggle="dropdown" class="dropdown-toggle py-2 px-5">Sports<b class="caret"></b></a>
+                                            <ul class="dropdown-menu" >
+                                                <li>
+                                                    <div class="checkbox">
+                                                        <label>
+                                                            <input type="checkbox">Baseball
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="checkbox">
+                                                        <label>
+                                                            <input type="checkbox">Soccer
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="list-group-item">Option 3</li>
+                                        <li class="list-group-item">Option 4</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-9 mx-4" style="border: 2px solid red;">
+                <div class="row">
+                    <div class="col p-2" style="background-color: #E9ECEF; border-bottom: 2px solid black;">
+                        <h4>
+                            Leagues to Join:
+                        </h4>
+                    </div>
+                </div>
+                <div class="row my-4 mx-3 py-2 px-3" style="border: 2px solid black;">
+                    <div class="col">
+                        <div class="row justify-content-center py2">
+                            <div class="col-lg-3">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="card-title">League 1</h4>
+                                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt velit quae incidunt soluta. Fugit corrupti rem ut incidunt quod ipsa inventore ex modi vero, officia repudiandae praesentium optio veritatis eum?</p>
+                                        <button   class="btn btn-secondary btn-lg active leaguePageBtn" role="button" aria-pressed="true">League page</button>
+                                        <button   class="btn btn-primary btn-lg active leaguePageBtn" role="button" aria-pressed="true">Register</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="card-title">League 2</h4>
+                                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt velit quae incidunt soluta. Fugit corrupti rem ut incidunt quod ipsa inventore ex modi vero, officia repudiandae praesentium optio veritatis eum?</p>
+                                        <button   class="btn btn-secondary btn-lg active leaguePageBtn" role="button" aria-pressed="true">League page</button>
+                                        <button   class="btn btn-primary btn-lg active leaguePageBtn" role="button" aria-pressed="true">Register</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="card-title">League 3</h4>
+                                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt velit quae incidunt soluta. Fugit corrupti rem ut incidunt quod ipsa inventore ex modi vero, officia repudiandae praesentium optio veritatis eum?</p>
+                                        <button   class="btn btn-secondary btn-lg active leaguePageBtn" role="button" aria-pressed="true">League page</button>
+                                        <button   class="btn btn-primary btn-lg active leaguePageBtn" role="button" aria-pressed="true">Register</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="card-title">League 4</h4>
+                                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt velit quae incidunt soluta. Fugit corrupti rem ut incidunt quod ipsa inventore ex modi vero, officia repudiandae praesentium optio veritatis eum?</p>
+                                        <button   class="btn btn-secondary btn-lg active leaguePageBtn" role="button" aria-pressed="true">League page</button>
+                                        <button   class="btn btn-primary btn-lg active leaguePageBtn" role="button" aria-pressed="true">Register</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row py-2">
+                            <div class="col-lg-3">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="card-title">League 5</h4>
+                                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt velit quae incidunt soluta. Fugit corrupti rem ut incidunt quod ipsa inventore ex modi vero, officia repudiandae praesentium optio veritatis eum?</p>
+                                        <button   class="btn btn-secondary btn-lg active leaguePageBtn" role="button" aria-pressed="true">League page</button>
+                                        <button   class="btn btn-primary btn-lg active leaguePageBtn" role="button" aria-pressed="true">Register</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="card-title">League 6</h4>
+                                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt velit quae incidunt soluta. Fugit corrupti rem ut incidunt quod ipsa inventore ex modi vero, officia repudiandae praesentium optio veritatis eum?</p>
+                                        <button   class="btn btn-secondary btn-lg active leaguePageBtn" role="button" aria-pressed="true">League page</button>
+                                        <button   class="btn btn-primary btn-lg active leaguePageBtn" role="button" aria-pressed="true">Register</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+      <footer class="page-footer font-small cyan darken-3">
+        <div class="footer-copyright text-center py-3">© 2020 Copyright:
+          <a href="https://mdbootstrap.com/"> Soggybottomboys.com</a>
+        </div>
+      </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+        $('.mdb-select').materialSelect({
+        });
+        $('.carousel').carousel('pause');
+        $('.toManagedLeagues').on("click", function(){
+            $('#viewParticipantLeagues').addClass("hide");
+            $('#viewManagerLeagues').removeClass("hide");
+        });
+        $('.toParticipantLeagues').on("click", function(){
+            $('#viewManagerLeagues').addClass("hide");
+            $('#viewParticipantLeagues').removeClass("hide");
+        });
+    </script>
+</body>
+</html>
