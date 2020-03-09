@@ -8,17 +8,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./toDelete/custom.css">
     <script src="https://kit.fontawesome.com/7053292893.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#"><i class="fab fa-centos fa-5x"></i></a>
-        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
-            aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+<body class="is-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+        <a class="navbar-brand" href="#"><i style="color: white;" class="fab fa-centos fa-5x"></i></a>
+        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></i></span>
         </button>
         <div class="collapse navbar-collapse" id="collapsibleNavId">
@@ -30,8 +28,7 @@
                     <a class="nav-link" href="#">About Us</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
                     <div class="dropdown-menu" aria-labelledby="dropdownId">
                         <a class="dropdown-item" href="#">Search for leagues</a>
                         <a class="dropdown-item" href="#">Pay us money</a>
@@ -39,44 +36,43 @@
                 </li>
             </ul>
             <p>
-                <button type="button" class="btn btn-danger">Sign out</button>
-                <button type="button" class="btn btn-light" data-toggle="button" aria-pressed="false"
-                    autocomplete="off">
+                <button type="button" class="btn btn-secondary">Sign out</button>
+                <button type="button" class="btn btn-secondary" data-toggle="button" aria-pressed="false" autocomplete="off">
                     Toggle Dark Mode
                 </button>
             </p>
         </div>
     </nav>
-    <div class="jumbotron jumbotron-fluid my-0 py-4">
+    <div class="jumbotron jumbotron-fluid my-0 py-4 ">
         <div class="container">
-            <h1 class="display-3">League name here</h1>
+            <h1 class="display-3">Soggybottom Boys</h1>
             <hr class="my-2">
         </div>
     </div>
     <div class="container-fluid d-flex h-100 flex-column">
         <div class="row whole-container-row">
             <div class="col-1 m-0 p-0"></div>
-            <div class="col-2 selections-column m-0 p-0">
+            <div class="col-2 selections-column m-0 p-0 border-primary border-right">
                 <div class="row w-100">
                     <div class="col-12 m-0 p-0">
                         <div class="row align-items-center">
                             <div class="col-12" id="announceInfo">
-                                Announcements
+                                <button class="btn">Announcements</button>
                             </div>
                         </div>
                         <div class="row  align-items-center">
                             <div class="col-12" id="schedInfo">
-                                Schedule
+                                <button class="btn">Schedule</button>
                             </div>
                         </div>
                         <div class="row align-items-center">
                             <div class="col-12" id="partInfo">
-                                Participants
+                                <button class="btn">Participants</button>
                             </div>
                         </div>
                         <div class="row align-items-center">
                             <div class="col-12" id="ownerInfo">
-                                Owner info
+                                <button class="btn">Owner contact</button>
                             </div>
                         </div>
                     </div>
@@ -85,66 +81,136 @@
             <div class="col-9 right-section">
                 <div class="row content-section justify-content-center">
                     <div class="col-10 m-0 p-0">
-                        <div id="announce-div" class="populated-div ">
+                        <div id="announce-div" class="populated-div hide">
                             <div class="row justify-content-center m-0 p-0">
-                                <div class="col-11 div-title">
-                                    <h1>Announcements</h1>
+                                <div class="col-11 div-title border border-right-0 border-left-0 border-top-0 border-secondary">
+                                    <h1 class="text-secondary">Announcements</h1>
                                 </div>
                             </div>
+                            <br>
                             <div class="row row-about justify-content-center">
-                                <div class="col-11">
-                                    <p id="about-me-text">
-                                        This is where we will make announcements populate
-                                    </p>
+                                <div class="col-11 ">
+                                    <li class="text-primary ">
+                                        <h5 class="d-inline-flex" style="color: black;">This is an announcement</h5>
+                                    </li>
+                                    <li class="text-primary ">
+                                        <h5 class="d-inline-flex" style="color: black;">This is an announcement</h5>
+                                    </li>
+                                    <li class="text-primary ">
+                                        <h5 class="d-inline-flex" style="color: black;">This is an announcement</h5>
+                                    </li>
+                                    <li class="text-primary ">
+                                        <h5 class="d-inline-flex" style="color: black;">This is an announcement</h5>
+                                    </li>
+                                    <li class="text-primary ">
+                                        <h5 class="d-inline-flex" style="color: black;">This is an announcement</h5>
+                                    </li>
+                                    <li class="text-primary ">
+                                        <h5 class="d-inline-flex" style="color: black;">This is an announcement</h5>
+                                    </li>
                                 </div>
                             </div>
                         </div>
-                        <div id="sched-div" class="populated-div hide">
+                        <div id="sched-div" class="populated-div ">
                             <div class="row justify-content-center m-0 p-0">
                                 <div class="col-11 div-title">
                                     <h1>Schedule</h1>
                                 </div>
                             </div>
-                            <div class="row row-about justify-content-center">
-                                <div class="col-11">
-                                    <p id="about-me-text">
-                                        This is where we will make schedules populate
-                                    </p>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="card border border-primary">
+                                        <img class="card-img-top" src="https://www.gamasutra.com/db_area/images/news/2018/Jun/320213/supermario64thumb1.jpg" alt="Card image cap">
+                                        <div class="card-body">
+                                            <h5 class="card-title" id="stronger">Super Mario League</h5>
+                                            <p class="card-text">Owner: Luigi Mario</p>
+                                            <p class="card-text">Sport: Bumper balls</p>
+                                            <p class="card-text">Age range: E for everyone</p>
+                                            <div class="row">
+                                                <div class="col-sm">
+                                                    <a href="#" class="btn btn-primary">Register for league</a>
+                                                </div>
+                                                <div class="col-sm">
+                                                    <a href="#" class="btn btn-primary">League home page</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="row">
+                                        <div class="card border border-primary">
+                                            <div class="card-body">
+                                                <h5 class="card-title" id="stronger">Super Mario League</h5>
+                                                <p class="card-text">Owner: Luigi Mario</p>
+                                                <p class="card-text">Sport: Bumper balls</p>
+                                                <p class="card-text">Age range: E for everyone</p>
+                                                <div class="row">
+                                                    <div class="col-sm">
+                                                        <a href="#" class="btn btn-primary">Register for league</a>
+                                                    </div>
+                                                    <div class="col-sm">
+                                                        <a href="#" class="btn btn-primary">League home page</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br><br><br>
+                                    <div class="row">
+                                        <div class="card border border-primary text-center">
+                                            <div class="card-body">
+                                                <h5 class="card-title" id="stronger">Super Mario League</h5>
+                                                <p class="card-text">Owner: Luigi Mario</p>
+                                                <p class="card-text">Sport: Bumper balls</p>
+                                                <p class="card-text">Age range: E for everyone</p>
+                                                <div class="row">
+                                                    <div class="col-sm">
+                                                        <a href="#" class="btn btn-primary">Register for league</a>
+                                                    </div>
+                                                    <div class="col-sm">
+                                                        <a href="#" class="btn btn-primary">League home page</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div id="part-div" class="populated-div hide">
-                            <div class="row justify-content-center m-0 p-0">
-                                <div class="col-11 div-title">
-                                    <h1>Participants</h1>
-                                </div>
-                            </div>
-                            <div class="row row-about justify-content-center">
-                                <div class="col-11">
-                                    <p id="about-me-text">
-                                        This is where we will make announcements populate
-                                    </p>
-                                </div>
+                    </div>
+                    <div id="part-div" class="populated-div hide">
+                        <div class="row justify-content-center m-0 p-0">
+                            <div class="col-11 div-title">
+                                <h1>Participants</h1>
                             </div>
                         </div>
-                        <div id="owner-div" class="populated-div hide">
-                            <div class="row justify-content-center m-0 p-0">
-                                <div class="col-11 div-title">
-                                    <h1>League Owner information</h1>
-                                </div>
+                        <div class="row row-about justify-content-center">
+                            <div class="col-11">
+                                <p id="about-me-text">
+                                    This is where we will make announcements populate
+                                </p>
                             </div>
-                            <div class="row row-about justify-content-center">
-                                <div class="col-11">
-                                    <p id="about-me-text">
-                                        This is where we will make owner info populate
-                                    </p>
-                                </div>
+                        </div>
+                    </div>
+                    <div id="owner-div" class="populated-div hide">
+                        <div class="row justify-content-center m-0 p-0">
+                            <div class="col-11 div-title">
+                                <h1>League Owner information</h1>
+                            </div>
+                        </div>
+                        <div class="row row-about justify-content-center">
+                            <div class="col-11">
+                                <p id="about-me-text">
+                                    This is where we will make owner info populate
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     </div>
 
     <footer class="page-footer font-small cyan darken-3">
@@ -154,14 +220,9 @@
     </footer>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.js"
-        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 
 </html>
