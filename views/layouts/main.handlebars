@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
+
 </head>
 
 <body>
@@ -26,13 +27,13 @@
           <a class="nav-link" href="#">Contact<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About Us</a>
+          <a class="nav-link" href="portal">Your Portal</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true"
             aria-expanded="false">Dropdown</a>
           <div class="dropdown-menu" aria-labelledby="dropdownId">
-            <a class="dropdown-item" href="#">Search for leagues</a>
+            <a class="dropdown-item" href="league-search">Search for leagues</a>
             <a class="dropdown-item" href="#">Pay us money</a>
           </div>
         </li>
@@ -65,7 +66,11 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
-  <script>
+
+  <script src="/assets/js/signup.js"></script>
+  <script src="/assets/js/login.js"></script>
+   <script src="/assets/js/portal.js"></script>
+  {{!-- <script>
 
     $('.carousel').carousel('pause');
     $('.toManagedLeagues').on("click", function () {
@@ -76,7 +81,7 @@
       $('#viewManagerLeagues').addClass("hide");
       $('#viewParticipantLeagues').removeClass("hide");
     });
-  </script>
+  </script> --}}
 </body>
 
 </html>
