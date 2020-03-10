@@ -4766,10 +4766,6 @@ a.close.disabled {
     display: none
 }
 
-.hide {
-    display: none;
-}
-
 .toast-header {
     display: flex;
     align-items: center;
@@ -8938,4 +8934,13 @@ a.text-dark:focus {
         width: 23%;
         margin: 5px 1% !important;
     }
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+    filter: invert(1);
+}
+
+.hide {
+    display: none;
+
 }
