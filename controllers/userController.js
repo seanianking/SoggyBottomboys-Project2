@@ -36,15 +36,40 @@ router.post("/api/signup", function(req, res) {
 
 // Portal page route
 router.get("/portal", function(req, res) {
-  res.render("portal");
+  if (!req.user) {
+    res.redirect("/");
+  } else {
+    res.render("portal");
+  }
 });
 
 router.get("/league-home", function(req, res) {
-  res.render("league-home");
+  if (!req.user) {
+    res.redirect("/");
+  } else {
+    res.render("league-home");
+  }
 });
 
 router.get("/league-search", function(req, res) {
-  res.render("league-search");
+  if (!req.user) {
+    res.redirect("/");
+  } else {
+    db.League.findAll({}).then(function(dbLeague) {
+      // res.json(dbLeague);
+      // console.log(JSON.stringify(dbLeague, null, 2));
+      res.render("league-search", {
+        dbLeague: dbLeague.map(e => ({
+          league_name: e.league_name,
+          sport: e.sport,
+          age_range: e.age_range,
+          city: e.city,
+          state: e.state,
+          location: e.location
+        }))
+      });
+    });
+  }
 });
 
 // Logs out user
