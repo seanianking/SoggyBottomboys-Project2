@@ -25,37 +25,43 @@
                             </div>
                             <div class="row py-2">
                                 <div class="col">
-                                    <ul class="list-group">
-                                        <li class="list-group-item">
-                                            <label for="form-control">Gender</label>
+                                    <div class="accordion" id="accordionExample">
+                                        <div class="card">
+                                            <div class="card-header" id="headingOne">
+                                            <h2 class="mb-0">
+                                                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                Gender
+                                                </button>
+                                            </h2>
+                                            </div>
+
+                                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                            <div class="card-body">
                                             <select class="form-control">
                                                 <option value="one">Boy</option>
                                                 <option value="two">Girl</option>
                                             </select>
-                                        </li>
-                                        <li class="list-group-item">
-                                            <label for="dropdown-toggle">Sports</label>
-                                            <a data-toggle="dropdown" class="dropdown-toggle py-2 px-5">Sports<b class="caret"></b></a>
-                                            <ul class="dropdown-menu" >
-                                                <li>
-                                                    <div class="checkbox">
-                                                        <label>
-                                                            <input type="checkbox">Baseball
-                                                        </label>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="checkbox">
-                                                        <label>
-                                                            <input type="checkbox">Soccer
-                                                        </label>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li class="list-group-item">Option 3</li>
-                                        <li class="list-group-item">Option 4</li>
-                                    </ul>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header" id="headingTwo">
+                                            <h2 class="mb-0">
+                                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                Sports
+                                                </button>
+                                            </h2>
+                                            </div>
+                                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                                            <div class="card-body" style="height: auto;">
+                                            <select class="form-control">
+                                                <option value="one">Baseball</option>
+                                                <option value="two">Soccer</option>
+                                            </select>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        </div>
                                 </div>
                             </div>
                         </form>
@@ -72,9 +78,19 @@
                 </div>
                 <div class="row my-4 mx-3 py-2 px-3" style="border: 2px solid black;">
                     <div class="col">
-                        <div class="row justify-content-center py2">
-                            <div class="col-lg-3">
-                                <div class="card">
+                        <ul class="list-group list-group-horizontal align-items-stretch flex-wrap" id="searchCardArea">
+                                <li class="list-group-item border-0">
+                                    <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="card-title">League 1</h4>
+                                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt velit quae incidunt soluta. Fugit corrupti rem ut incidunt quod ipsa inventore ex modi vero, officia repudiandae praesentium optio veritatis eum?</p>
+                                        <button   class="btn btn-secondary btn-lg active leaguePageBtn" role="button" aria-pressed="true">League page</button>
+                                        <button   class="btn btn-primary btn-lg active leaguePageBtn" role="button" aria-pressed="true">Register</button>
+                                    </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item border-0">
+                                  <div class="card">
                                     <div class="card-body">
                                         <h4 class="card-title">League 1</h4>
                                         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt velit quae incidunt soluta. Fugit corrupti rem ut incidunt quod ipsa inventore ex modi vero, officia repudiandae praesentium optio veritatis eum?</p>
@@ -82,60 +98,68 @@
                                         <button   class="btn btn-primary btn-lg active leaguePageBtn" role="button" aria-pressed="true">Register</button>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-3">
-                                <div class="card">
+                                </li>
+                                <li class="list-group-item border-0">
+                                  <div class="card">
                                     <div class="card-body">
-                                        <h4 class="card-title">League 2</h4>
+                                        <h4 class="card-title">League 1</h4>
                                         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt velit quae incidunt soluta. Fugit corrupti rem ut incidunt quod ipsa inventore ex modi vero, officia repudiandae praesentium optio veritatis eum?</p>
                                         <button   class="btn btn-secondary btn-lg active leaguePageBtn" role="button" aria-pressed="true">League page</button>
                                         <button   class="btn btn-primary btn-lg active leaguePageBtn" role="button" aria-pressed="true">Register</button>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-3">
-                                <div class="card">
+                                </li>
+                                <li class="list-group-item border-0">
+                                  <div class="card">
                                     <div class="card-body">
-                                        <h4 class="card-title">League 3</h4>
+                                        <h4 class="card-title">League 1</h4>
                                         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt velit quae incidunt soluta. Fugit corrupti rem ut incidunt quod ipsa inventore ex modi vero, officia repudiandae praesentium optio veritatis eum?</p>
                                         <button   class="btn btn-secondary btn-lg active leaguePageBtn" role="button" aria-pressed="true">League page</button>
                                         <button   class="btn btn-primary btn-lg active leaguePageBtn" role="button" aria-pressed="true">Register</button>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-3">
-                                <div class="card">
+                                </li>
+                                <li class="list-group-item border-0">
+                                  <div class="card">
                                     <div class="card-body">
-                                        <h4 class="card-title">League 4</h4>
+                                        <h4 class="card-title">League 1</h4>
                                         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt velit quae incidunt soluta. Fugit corrupti rem ut incidunt quod ipsa inventore ex modi vero, officia repudiandae praesentium optio veritatis eum?</p>
                                         <button   class="btn btn-secondary btn-lg active leaguePageBtn" role="button" aria-pressed="true">League page</button>
                                         <button   class="btn btn-primary btn-lg active leaguePageBtn" role="button" aria-pressed="true">Register</button>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="row py-2">
-                            <div class="col-lg-3">
-                                <div class="card">
+                                </li>
+                                <li class="list-group-item border-0">
+                                  <div class="card">
                                     <div class="card-body">
-                                        <h4 class="card-title">League 5</h4>
+                                        <h4 class="card-title">League 1</h4>
                                         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt velit quae incidunt soluta. Fugit corrupti rem ut incidunt quod ipsa inventore ex modi vero, officia repudiandae praesentium optio veritatis eum?</p>
                                         <button   class="btn btn-secondary btn-lg active leaguePageBtn" role="button" aria-pressed="true">League page</button>
                                         <button   class="btn btn-primary btn-lg active leaguePageBtn" role="button" aria-pressed="true">Register</button>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-3">
-                                <div class="card">
+                                </li>
+                                <li class="list-group-item border-0">
+                                  <div class="card">
                                     <div class="card-body">
-                                        <h4 class="card-title">League 6</h4>
+                                        <h4 class="card-title">League 1</h4>
                                         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt velit quae incidunt soluta. Fugit corrupti rem ut incidunt quod ipsa inventore ex modi vero, officia repudiandae praesentium optio veritatis eum?</p>
                                         <button   class="btn btn-secondary btn-lg active leaguePageBtn" role="button" aria-pressed="true">League page</button>
                                         <button   class="btn btn-primary btn-lg active leaguePageBtn" role="button" aria-pressed="true">Register</button>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
+                                </li>
+                                <li class="list-group-item border-0">
+                                  <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="card-title">League 1</h4>
+                                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt velit quae incidunt soluta. Fugit corrupti rem ut incidunt quod ipsa inventore ex modi vero, officia repudiandae praesentium optio veritatis eum?</p>
+                                        <button   class="btn btn-secondary btn-lg active leaguePageBtn" role="button" aria-pressed="true">League page</button>
+                                        <button   class="btn btn-primary btn-lg active leaguePageBtn" role="button" aria-pressed="true">Register</button>
+                                    </div>
+                                </div>
+                                </li>
+                            </ul>
                     </div>
                 </div>
             </div>
