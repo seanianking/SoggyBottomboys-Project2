@@ -8919,6 +8919,26 @@ a.text-dark:focus {
     font-weight: bolder;
 }
 
+/* Media Query's for card population responsiveness */
+@media (min-width: 768px) {
+    .list-group-item {
+        width: 47%;
+        margin: 5px 1.5% !important;
+    }
+}
+/* @media (min-width: 768px) {
+    .list-group-item {
+        width: 47%;
+        margin: 5px 1% !important;
+    }
+} */
+@media (min-width: 992px) {
+    .list-group-item {
+        width: 31.33%;
+        margin: 5px 1% !important;
+    }
+}
+
 .carousel-control-next-icon,
 .carousel-control-prev-icon {
     filter: invert(1);
@@ -8926,6 +8946,7 @@ a.text-dark:focus {
 
 .hide {
     display: none;
+
 }
 
 li.leagueBullet::before {
@@ -8935,4 +8956,5 @@ li.leagueBullet::before {
     display: inline-block;
     width: 1em;
     margin-left: -1em
+
 }
