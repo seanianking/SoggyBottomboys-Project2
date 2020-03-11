@@ -4413,10 +4413,11 @@ a.badge-dark.focus {
 .list-group-item {
     position: relative;
     display: block;
-    padding: .75rem 1.25rem;
+    padding: 0 0;
     margin-bottom: -3px;
     background-color: #fff;
-    border: 3px solid rgba(0, 0, 0, 0.125)
+    border: 3px solid rgba(0, 0, 0, 0.125);
+    width: 100%;
 }
 
 .list-group-item:first-child {
