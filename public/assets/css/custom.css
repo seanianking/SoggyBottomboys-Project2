@@ -90,6 +90,7 @@ hr {
     height: 0;
     overflow: visible;
     color: #094cb7;
+    border-radius: .25rem;
 }
 
 h1,
@@ -126,7 +127,8 @@ ol,
 ul,
 dl {
     margin-top: 0;
-    margin-bottom: 1rem
+    margin-bottom: 1rem;
+    list-style: none;
 }
 
 ol ol,
@@ -1468,7 +1470,7 @@ textarea.form-control.is-invalid {
 .btn:focus,
 .btn.focus {
     outline: 0;
-    box-shadow: 0 0 0 .2rem rgba(25, 105, 0, 0.25)
+    box-shadow: 0 0 0 .2rem #ffcc00
 }
 
 .btn.disabled,
@@ -1556,13 +1558,13 @@ fieldset:disabled a.btn {
 }
 
 .btn-success {
-    color: #212529;
+    color: #fff;
     background: #778899;
     border-color: #778899
 }
 
 .btn-success:hover {
-    color: #212529;
+    color: #fff;
     background: #e3e340;
     border-color: #e2e234
 }
@@ -1574,7 +1576,7 @@ fieldset:disabled a.btn {
 
 .btn-success.disabled,
 .btn-success:disabled {
-    color: #212529;
+    color: #fff;
     background-color: #778899;
     border-color: #778899;
     background-image: none
@@ -1583,7 +1585,7 @@ fieldset:disabled a.btn {
 .btn-success:not(:disabled):not(.disabled):active,
 .btn-success:not(:disabled):not(.disabled).active,
 .show>.btn-success.dropdown-toggle {
-    color: #212529;
+    color: #fff;
     background-color: #e2e234;
     background-image: none;
     border-color: #e0e029
@@ -1716,13 +1718,13 @@ fieldset:disabled a.btn {
 }
 
 .btn-light {
-    color: #212529;
+    color: #000;
     background: #f5f5f5;
     border-color: #f5f5f5
 }
 
 .btn-light:hover {
-    color: #212529;
+    color: #000;
     background: #d8dcd8;
     border-color: #d1d6d1
 }
@@ -1734,7 +1736,7 @@ fieldset:disabled a.btn {
 
 .btn-light.disabled,
 .btn-light:disabled {
-    color: #212529;
+    color: #000;
     background-color: #f5f5f5;
     border-color: #f5f5f5;
     background-image: none
@@ -1873,7 +1875,7 @@ fieldset:disabled a.btn {
 }
 
 .btn-outline-success:hover {
-    color: #212529;
+    color: #fff;
     background-color: #778899;
     border-color: #778899
 }
@@ -1892,7 +1894,7 @@ fieldset:disabled a.btn {
 .btn-outline-success:not(:disabled):not(.disabled):active,
 .btn-outline-success:not(:disabled):not(.disabled).active,
 .show>.btn-outline-success.dropdown-toggle {
-    color: #212529;
+    color: #fff;
     background-color: #778899;
     border-color: #778899
 }
@@ -5448,7 +5450,7 @@ a.close.disabled {
     margin-left: 3px;
     text-indent: -999px;
     cursor: pointer;
-    background-color: #fff;
+    background-color: #000;
     background-clip: padding-box;
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
@@ -8924,4 +8926,13 @@ a.text-dark:focus {
 
 .hide {
     display: none;
+}
+
+li::before {
+    content: "•";
+    font-weight: bolder;
+    color: var(--primary);
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em
 }

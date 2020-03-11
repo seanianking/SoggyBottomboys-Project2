@@ -1,5 +1,5 @@
-<link rel="stylesheet" href="./../assets/css/custom.css" type="text/css"/>
-<div class="jumbotron jumbotron-fluid my-0 py-4">
+<link rel="stylesheet" href="./../assets/css/custom.css" type="text/css" />
+<div class="jumbotron jumbotron-fluid my-0 py-4 bg-light">
     <div class="container">
         <h1 class="display-3">League name here</h1>
         <hr class="my-2">
@@ -10,84 +10,135 @@
         <div class="col-1 m-0 p-0"></div>
         <div class="col-2 selections-column m-0 p-0">
             <div class="row w-100">
-                <div class="col-12 m-0 p-0">
-                    <div class="row align-items-center">
-                        <div class="col-12" id="announceInfo">
-                            Announcements
-                        </div>
+                <div class="col-12 m-0 p-0 ">
+                    <div class="row ml-0">
+                        <button class="col-11 btn text-left">
+                            <div id="announceInfo">
+                                Announcements
+                            </div>
+                        </button>
                     </div>
-                    <div class="row  align-items-center">
-                        <div class="col-12" id="schedInfo">
-                            Schedule
-                        </div>
+                    <br>
+                    <div class="row  ml-0">
+                        <button class="col-11 btn text-left">
+                            <div id="schedInfo">
+                                Schedule
+                            </div>
+                        </button>
                     </div>
-                    <div class="row align-items-center">
-                        <div class="col-12" id="partInfo">
-                            Participants
-                        </div>
+                    <br>
+                    <div class="row ml-0">
+                        <button class="col-11 btn text-left">
+                            <div id="partInfo">
+                                Participants
+                            </div>
+                        </button>
                     </div>
-                    <div class="row align-items-center">
-                        <div class="col-12" id="ownerInfo">
-                            Owner info
-                        </div>
+                    <br>
+                    <div class="row ml-0">
+                        <button class="col-11 btn text-left">
+                            <div id="ownerInfo">
+                                Owner info
+                            </div>
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-9 right-section">
+        <div class="col-9 right-section border-left border-primary">
             <div class="row content-section justify-content-center">
                 <div class="col-10 m-0 p-0">
                     <div id="announce-div" class="populated-div ">
                         <div class="row justify-content-center m-0 p-0">
                             <div class="col-11 div-title">
                                 <h1>Announcements</h1>
+                                <hr>
                             </div>
                         </div>
-                        <div class="row row-about justify-content-center">
+                        <div class="row justify-content-center m-0">
                             <div class="col-11">
-                                <p id="about-me-text">
-                                    This is where we will make announcements populate
+                                <p id="announce-text">
+                                    <ul>
+                                        <li style="font-size: x-large;">This is an announcement</li>
+                                        <li style="font-size: x-large;">This is an announcement</li>
+                                        <li style="font-size: x-large;">This is an announcement</li>
+                                        <li style="font-size: x-large;">This is an announcement</li>
+                                        <li style="font-size: x-large;">This is an announcement</li>
+                                        <li style="font-size: x-large;">This is an announcement</li>
+                                    </ul>
                                 </p>
                             </div>
                         </div>
                     </div>
-                    <div id="sched-div" class="populated-div hide">
+                    <div id="sched-div" class="populated-div  ">
                         <div class="row justify-content-center m-0 p-0">
                             <div class="col-11 div-title">
                                 <h1>Schedule</h1>
+                                <hr>
                             </div>
                         </div>
-                        <div class="row row-about justify-content-center">
+                        <div class="row justify-content-center m-0">
                             <div class="col-11">
-                                <p id="about-me-text">
-                                    This is where we will make schedules populate
+                                <p id="sched-text">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Date</th>
+                                                <th scope="col">Team 1</th>
+                                                <th scope="col">VS.</th>
+                                                <th scope="col">Team 2</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">3/10</th>
+                                                <td>Nicholas' Knights</td>
+                                                <td>VS.</td>
+                                                <td>Tucker's T-Rex Brigade</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">3/11</th>
+                                                <td>Sean's Sharpshooters</td>
+                                                <td>VS.</td>
+                                                <td>Tyler's Tyrants</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">3/14</th>
+                                                <td>Jason's Geriatrics</td>
+                                                <td>VS.</td>
+                                                <td>Khris' Conquerors</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </p>
                             </div>
                         </div>
                     </div>
-                    <div id="part-div" class="populated-div hide">
+                    <div id="part-div" class="populated-div  ">
                         <div class="row justify-content-center m-0 p-0">
                             <div class="col-11 div-title">
                                 <h1>Participants</h1>
+                                <hr>
                             </div>
                         </div>
-                        <div class="row row-about justify-content-center">
+                        <div class="row justify-content-center m-0">
                             <div class="col-11">
-                                <p id="about-me-text">
-                                    This is where we will make announcements populate
+                                <p id="part-text">
+                                    This is where we will make participant info populate
                                 </p>
                             </div>
                         </div>
                     </div>
-                    <div id="owner-div" class="populated-div hide">
+                    <div id="owner-div" class="populated-div  ">
                         <div class="row justify-content-center m-0 p-0">
                             <div class="col-11 div-title">
                                 <h1>League Owner information</h1>
+                                <hr>
                             </div>
                         </div>
-                        <div class="row row-about justify-content-center">
+                        <div class="row justify-content-center m-0">
                             <div class="col-11">
-                                <p id="about-me-text">
+                                <p id="owner-text">
                                     This is where we will make owner info populate
                                 </p>
                             </div>
