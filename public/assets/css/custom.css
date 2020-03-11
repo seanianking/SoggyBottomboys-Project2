@@ -8917,23 +8917,24 @@ a.text-dark:focus {
 }
 
 /* Media Query's for card population responsiveness */
-@media (min-width: 576px) {
+@media (min-width: 768px) {
     .list-group-item {
         width: 47%;
         margin: 5px 1.5% !important;
     }
 }
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
     .list-group-item {
-        width: 31.333%;
+        width: 47%;
+        margin: 5px 1% !important;
+    }
+} */
+@media (min-width: 992px) {
+    .list-group-item {
+        width: 31.33%;
         margin: 5px 1% !important;
     }
 }
-@media (min-width: 992px) {
-    .list-group-item {
-        width: 23%;
-        margin: 5px 1% !important;
-    }
 
 .carousel-control-next-icon,
 .carousel-control-prev-icon {
