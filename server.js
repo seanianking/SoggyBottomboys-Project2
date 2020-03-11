@@ -36,9 +36,9 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 // Import routes and give the server access to them.
-var routes = require("./controllers/userController.js");
-
-app.use(routes);
+// var routes = require("./controllers/userController.js");
+require("./routes/api-routes.js")(app);
+require("./routes/html-routes.js")(app);
 
 // Syncing our database and logging a message to the user upon success
 

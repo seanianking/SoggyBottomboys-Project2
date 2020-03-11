@@ -1,11 +1,11 @@
-var express = require("express");
 
-var router = express.Router();
+module.exports = function(app) {
 
-const db = require("../models");
+    const db = require("../models");
+
 
 // Signup page post route
-router.post("/api/signup", function(req, res) {
+app.post("/api/signup", function(req, res) {
     db.Users.create({
       email: req.body.email,
       password: req.body.password
@@ -17,3 +17,16 @@ router.post("/api/signup", function(req, res) {
         res.status(401).json(err);
       });
   });
+
+  app.post("/api/league-home/:league_name", function(res,req) {
+      db.league.findone({
+          where:{
+              league:req.params.league
+          }
+      })
+      .then(function(dbLeague){
+          res.json(dbLeague);
+          console.log(dbLeague)
+      })
+  });
+};
