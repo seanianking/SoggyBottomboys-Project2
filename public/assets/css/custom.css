@@ -8928,7 +8928,7 @@ a.text-dark:focus {
     display: none;
 }
 
-li::before {
+li.leagueBullet::before {
     content: "•";
     font-weight: bolder;
     color: var(--info);
