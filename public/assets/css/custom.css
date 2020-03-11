@@ -8931,7 +8931,7 @@ a.text-dark:focus {
 li::before {
     content: "•";
     font-weight: bolder;
-    color: var(--primary);
+    color: var(--info);
     display: inline-block;
     width: 1em;
     margin-left: -1em
