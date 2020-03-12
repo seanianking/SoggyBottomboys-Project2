@@ -93,10 +93,17 @@
                   <p class="card-text">{{city}}, {{state}}</p>
                   <p class="card-text">{{location}}</p>
 
+
+                  <button data-id="{{id}}" href="/league-home/{{this.id}}" class="btn btn-secondary btn-lg active leaguePageBtn" role="button"
+                    aria-pressed="true">League
+
+
                   <button class="btn btn-warning btn-lg active leaguePageBtn" role="button" aria-pressed="true">League
+
                     page</button>
                   <button class="btn btn-warning btn-lg" role="button" aria-pressed="true" data-toggle="modal"
                     data-target="#exampleModal">Register</button>
+
                 </div>
               </div>
             </li>
@@ -148,9 +155,11 @@
         </form>
       </div>
       <div class="modal-footer">
+
         <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
         <button type="button" class="btn btn-info">Save changes</button>
       </div>
     </div>
   </div>
 </div>
+
