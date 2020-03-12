@@ -3696,7 +3696,7 @@ input[type="button"].btn-block {
     padding: .75rem 1.25rem;
     margin-bottom: 0;
     background-color: rgba(0, 0, 0, 0.03);
-    border-bottom: 3px solid rgba(0, 0, 0, 0.125)
+    /* border-bottom: 3px solid rgba(0, 0, 0, 0.125) */
 }
 
 .card-header:first-child {
