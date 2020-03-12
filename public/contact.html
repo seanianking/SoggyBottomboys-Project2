@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>About Us</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="../public/assets/css/custom.css" type="text/css"/>
+  <script src="https://kit.fontawesome.com/7053292893.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+    <a class="navbar-brand navbar-light" href="#">League Manager</a>
+    <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+      aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavId">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="portal">Your Portal</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">Dropdown</a>
+          <div class="dropdown-menu" aria-labelledby="dropdownId">
+            <a class="dropdown-item" href="league-search">Search for leagues</a>
+            <a class="dropdown-item" href="#">Pay us money</a>
+          </div>
+        </li>
+      </ul>
+      <p>
+        <a href="/logout"><button type="button" class="btn btn-secondary">Sign out</button></a>
+      </p>
+    </div>
+  </nav>
+
+  <link rel="stylesheet" href="./../assets/css/custom.css" type="text/css" />
+  <div class="jumbotron jumbotron-fluid my-0 py-4">
+      <div class="container">
+          <h1 class="display-3">Welcome Athletes!</h1>
+          <hr class="my-2">
+      </div>
+  </div>
+  <div class="container my-4 border border-primary">
+      <div class="row">
+          <div class="col-lg-12 px-0 border border-info">
+              <div class="card">
+                  <div class="card-body">
+                      <h2 class="card-title">Please feel free to contact us with any questions, or concerns. </h2>
+                      
+
+                      <div class="container">
+
+                        <form class="contactform" action="https://formspree.io/mlejdwwa" method="POST">
+                            <div class="field">
+                                <label class="label">Name</label>
+                                <div class="control">
+                                  <input class="input" type="text" name="userName" placeholder="Your Name">
+                                </div>
+                              </div>
+                              
+                              <div class="field">
+                                <label class="label">Email</label>
+                                <div class="control has-icons-left has-icons-right">
+                                  <input class="input is-danger" type="email" name="_replyto" placeholder="Email input">
+                                  <span class="icon is-small is-left">
+                                    <i class="fas fa-envelope"></i>
+                                  </span>
+                                </div>
+                              </div>
+                              
+                              <!-- <div class="field">
+                                <label class="label">Subject</label>
+                                <div class="control">
+                                  <div class="select" name="contactOrReport">
+                                    <select>
+                                      <option>Contact</option>
+                                      <option>Report a Problem</option>
+                                    </select>
+                                  </div>
+                                </div>
+                              </div> -->
+                              
+                              <div class="field">
+                                <label class="label">Message</label>
+                                <div class="control">
+                                  <textarea class="textarea" name="message" placeholder="Textarea"></textarea>
+                                </div>
+                              </div>
+                              
+                            <div class="field is-grouped">
+                                <div class="control">
+                                  <button type="submit" class="button is-link">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                        </div>
+
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <footer class="page-footer font-small cyan darken-3 border-top border-primary mt-5">
+    <div class="footer-copyright text-center py-3">© 2020 Copyright:
+      <a href="https://mdbootstrap.com/"> Soggybottomboys.com</a>
+    </div>
+  </footer>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.4.1.js" 
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" 
+  crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+  <script src="/assets/js/signup.js"></script>
+  <script src="/assets/js/login.js"></script>
+   <script src="/assets/js/portal.js"></script>
+
+</body>
+
+</html>
