@@ -960,9 +960,9 @@ pre code {
 .form-control:focus {
     color: #495057;
     background-color: #fff;
-    border-color: #37e900;
+    border-color: #2eaed3;
     outline: 0;
-    box-shadow: 0 0 0 .2rem rgba(25, 105, 0, 0.25)
+    box-shadow: 0 0 0 .2rem #ee652e
 }
 
 .form-control::placeholder {
@@ -1599,19 +1599,20 @@ fieldset:disabled a.btn {
 
 .btn-info {
     color: #fff;
-    background: #2eaed3;
-    border-color: #2eaed3
+    background: #2eaed3 linear-gradient(180deg, #4dbada, #2eaed3) repeat-x;
+    border-color: #2eaed3;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075)
 }
 
 .btn-info:hover {
     color: #fff;
-    background: #2695b5;
+    background: #2695b5 linear-gradient(180deg, #47a5c0, #2695b5) repeat-x;
     border-color: #248caa
 }
 
 .btn-info:focus,
 .btn-info.focus {
-    box-shadow: 0 0 0 .2rem rgba(77, 186, 218, 0.5)
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0 .2rem rgba(77, 186, 218, 0.5)
 }
 
 .btn-info.disabled,
@@ -1634,24 +1635,25 @@ fieldset:disabled a.btn {
 .btn-info:not(:disabled):not(.disabled):active:focus,
 .btn-info:not(:disabled):not(.disabled).active:focus,
 .show>.btn-info.dropdown-toggle:focus {
-    box-shadow: 0 0 0 .2rem rgba(77, 186, 218, 0.5)
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 .2rem rgba(77, 186, 218, 0.5)
 }
 
 .btn-warning {
     color: #fff;
-    background: #ee652e;
-    border-color: #ee652e
+    background: #ee652e linear-gradient(180deg, #f17c4d, #ee652e) repeat-x;
+    border-color: #ee652e;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075)
 }
 
 .btn-warning:hover {
     color: #fff;
-    background: #5b8c92;
-    border-color: #56848a
+    background: #e34e12 linear-gradient(180deg, #e76936, #e34e12) repeat-x;
+    border-color: #d74a12
 }
 
 .btn-warning:focus,
 .btn-warning.focus {
-    box-shadow: 0 0 0 .2rem rgba(132, 173, 179, 0.5)
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0 .2rem rgba(241, 124, 77, 0.5)
 }
 
 .btn-warning.disabled,
@@ -1666,15 +1668,15 @@ fieldset:disabled a.btn {
 .btn-warning:not(:disabled):not(.disabled).active,
 .show>.btn-warning.dropdown-toggle {
     color: #fff;
-    background-color: #56848a;
+    background-color: #d74a12;
     background-image: none;
-    border-color: #517d82
+    border-color: #cc4611
 }
 
 .btn-warning:not(:disabled):not(.disabled):active:focus,
 .btn-warning:not(:disabled):not(.disabled).active:focus,
 .show>.btn-warning.dropdown-toggle:focus {
-    box-shadow: 0 0 0 .2rem rgba(132, 173, 179, 0.5)
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 .2rem rgba(241, 124, 77, 0.5)
 }
 
 .btn-danger {
@@ -8919,19 +8921,24 @@ a.text-dark:focus {
     font-weight: bolder;
 }
 
+
 /* Media Query's for card population responsiveness */
+
 @media (min-width: 768px) {
     .list-group-item {
         width: 47%;
         margin: 5px 1.5% !important;
     }
 }
+
+
 /* @media (min-width: 768px) {
     .list-group-item {
         width: 47%;
         margin: 5px 1% !important;
     }
 } */
+
 @media (min-width: 992px) {
     .list-group-item {
         width: 31.33%;
@@ -8946,7 +8953,6 @@ a.text-dark:focus {
 
 .hide {
     display: none;
-
 }
 
 li.leagueBullet::before {
@@ -8956,5 +8962,4 @@ li.leagueBullet::before {
     display: inline-block;
     width: 1em;
     margin-left: -1em
-
 }
