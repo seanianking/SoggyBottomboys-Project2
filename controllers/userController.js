@@ -6,23 +6,24 @@ const passport = require("../config/passport");
 const db = require("../models");
 
 // Home page route
-router.get("/", function(req, res) {
+router.get("/", function (req, res) {
   res.render("landing");
 });
 
 // Login route
-router.post("/", passport.authenticate("local"), function(req, res) {
+router.post("/", passport.authenticate("local"), function (req, res) {
   res.json(req.user);
 });
 
 // signup page get route
-router.get("/signup", function(req, res) {
+router.get("/signup", function (req, res) {
   res.render("signup");
 });
 
 // Signup page post route
 router.post("/api/signup", function(req, res) {
   console.log(req.body);
+
   db.Users.create({
     first_name: req.body.firstName,
     last_name: req.body.lastName,
@@ -39,7 +40,7 @@ router.post("/api/signup", function(req, res) {
 });
 
 // Portal page route
-router.get("/portal", function(req, res) {
+router.get("/portal", function (req, res) {
   if (!req.user) {
     res.redirect("/");
   } else {
@@ -63,6 +64,7 @@ router.get("/league-search", function(req, res) {
     res.redirect("/");
   } else {
     db.League.findAll({}).then(function(dbLeague) {
+
       // res.json(dbLeague);
       // console.log(JSON.stringify(dbLeague, null, 2));
       res.render("league-search", {
@@ -73,7 +75,8 @@ router.get("/league-search", function(req, res) {
           age_range: e.age_range,
           city: e.city,
           state: e.state,
-          location: e.location
+          location: e.location,
+          id: e.id
         }))
       });
     });
@@ -82,6 +85,7 @@ router.get("/league-search", function(req, res) {
 
 // Post route to CREATE NEW LEAGUE
 router.post("/api/add", function(req) {
+
   console.log(req.body);
   db.League.create({
     league_name: req.body.formLeagueName,
@@ -90,14 +94,13 @@ router.post("/api/add", function(req) {
     city: req.body.inputCity,
     state: req.body.inputState,
     location: req.body.inputLocation
-  }).then(function() {
-    /// need functionality to redirect to league-search page
-  });
+
+  }).then(function () { });
 });
 
-// ////
-router.get("/api/league-home/:id", function(req, res) {
-  console.log("click");
+// Get route to league-home page
+router.get("/api/league-home/:id", function (req, res) {
+
   if (!req.user) {
     res.redirect("/");
   } else {
@@ -105,27 +108,18 @@ router.get("/api/league-home/:id", function(req, res) {
       where: {
         id: req.params.id
       }
-    }).then(function(dbLeague) {
-      console.log(dbLeague);
-      res.render("league-search", {
-        dbLeague: dbLeague.map(e => {
-          return {
-            id: e.id,
-            league_name: e.league_name,
-            sport: e.sport,
-            age_range: e.age_range,
-            city: e.city,
-            state: e.state,
-            location: e.location
-          };
-        })
+
+    }).then(function (dbLeague) {
+      console.log(dbLeague.dataValues);
+      res.render("league-home", {
+        dbLeague: dbLeague.dataValues
       });
     });
   }
 });
 
 // Logs out user
-router.get("/logout", function(req, res) {
+router.get("/logout", function (req, res) {
   req.logout();
   res.redirect("/");
 });

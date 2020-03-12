@@ -1,19 +1,21 @@
-<link rel="stylesheet" href="./../assets/css/custom.css" type="text/css" />
-<div class="jumbotron jumbotron-fluid my-0 py-4">
+
+<link rel="stylesheet" href="./../assets/css/custom.css" type="text/css"/>
+<div class="jumbotron jumbotron-fluid my-0 py-4 bg-light">
+
     <div class="container">
         <h1 class="display-3">Your Portal</h1>
         <hr class="my-2">
     </div>
 </div>
-<div class="container my-4 border border-primary">
+<div class="container my-4 border rounded border-primary">
     <div class="row">
         <div class="col-lg-6 px-0 border border-info">
             <div class="card">
                 <div class="card-body">
                     <h2 class="card-title">Find a new league to join:</h2>
                     <p class="card-text">
-                        <button type="button" id="toLeagueSearch" class="btn btn-secondary btn-lg btn-block">League
-                            search</button>
+                        <button type="button" id="toLeagueSearch" class="btn btn-warning btn-lg btn-block">League search</button>
+
                     </p>
                 </div>
             </div>
@@ -23,7 +25,7 @@
                 <div class="card-body">
                     <h2 class="card-title">Create a league here:</h2>
                     <p class="card-text">
-                        <button type="button" class="btn btn-secondary btn-lg btn-block" data-toggle="modal"
+                        <button type="button" class="btn btn-warning btn-lg btn-block" data-toggle="modal"
                             data-target="#league-modal">Create a league</button>
                     </p>
                 </div>
@@ -31,17 +33,94 @@
         </div>
     </div>
 </div>
-<div class="container my-4 border border-primary">
+<div class="container my-4 border rounded border-primary">
     <div class="row">
         <div class="col-lg-12 px-0 border border-info">
             <div class="card" id="viewParticipantLeagues">
+
+                    <div class="card-body">
+                        <h2 class="card-title">View Current Leagues:</h2>
+                        <button class="btn btn-info toManagedLeagues">Leagues you manage</button>
+                        <p class="card-text">
+                            <ul class="list-group list-group-horizontal align-items-stretch flex-wrap" id="participantLeaguesArea">
+                                <li class="list-group-item border-0">
+                                    <div class="card ">
+                                            <div class="card-body">
+                                                <h4 class="card-title">League 8</h4>
+                                                <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum atque, harum voluptate quo, dolorem temporibus veniam delectus officia et veritatis eius. Repudiandae vero, neque beatae velit eveniet doloribus repellendus adipisci.</p>
+                                                <a href="#" class="btn btn-warning btn-lg active" role="button" aria-pressed="true">League page</a>
+
+                                            </div>
+                                        </div>
+                                </li>
+                                <li class="list-group-item border-0">
+                                    <div class="card ">
+                                            <div class="card-body">
+                                                <h4 class="card-title">League 8</h4>
+                                                <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum atque, harum voluptate quo, dolorem temporibus veniam delectus officia et veritatis eius. Repudiandae vero, neque beatae velit eveniet doloribus repellendus adipisci.</p>
+                                                <a href="#" class="btn btn-warning btn-lg active" role="button" aria-pressed="true">League page</a>
+                                            </div>
+                                        </div>
+                                </li>
+                                <li class="list-group-item border-0">
+                                    <div class="card ">
+                                            <div class="card-body">
+                                                <h4 class="card-title">League 8</h4>
+                                                <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum atque, harum voluptate quo, dolorem temporibus veniam delectus officia et veritatis eius. Repudiandae vero, neque beatae velit eveniet doloribus repellendus adipisci.</p>
+                                                <a href="#" class="btn btn-warning btn-lg active" role="button" aria-pressed="true">League page</a>
+                                            </div>
+                                        </div>
+                                </li>
+                                <li class="list-group-item border-0">
+                                    <div class="card ">
+                                            <div class="card-body">
+                                                <h4 class="card-title">League 8</h4>
+                                                <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum atque, harum voluptate quo, dolorem temporibus veniam delectus officia et veritatis eius. Repudiandae vero, neque beatae velit eveniet doloribus repellendus adipisci.</p>
+                                                <a href="#" class="btn btn-warning btn-lg active" role="button" aria-pressed="true">League page</a>
+                                            </div>
+                                        </div>
+                                </li>
+                                <li class="list-group-item border-0">
+                                    <div class="card ">
+                                            <div class="card-body">
+                                                <h4 class="card-title">League 8</h4>
+                                                <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum atque, harum voluptate quo, dolorem temporibus veniam delectus officia et veritatis eius. Repudiandae vero, neque beatae velit eveniet doloribus repellendus adipisci.</p>
+                                                <a href="#" class="btn btn-warning btn-lg active" role="button" aria-pressed="true">League page</a>
+                                            </div>
+                                        </div>
+                                </li>
+                                <li class="list-group-item border-0">
+                                    <div class="card ">
+                                            <div class="card-body">
+                                                <h4 class="card-title">League 8</h4>
+                                                <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum atque, harum voluptate quo, dolorem temporibus veniam delectus officia et veritatis eius. Repudiandae vero, neque beatae velit eveniet doloribus repellendus adipisci.</p>
+                                                <a href="#" class="btn btn-warning btn-lg active" role="button" aria-pressed="true">League page</a>
+                                            </div>
+                                        </div>
+                                </li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="card hide" id="viewManagerLeagues">
 
                 <div class="card-body">
                     <h2 class="card-title">View Current Leagues:</h2>
                     <button class="btn btn-info toManagedLeagues">Leagues you manage</button>
                     <p class="card-text">
+
                         <ul class="list-group list-group-horizontal align-items-stretch flex-wrap"
                             id="participantLeaguesArea">
+                            <li class="list-group-item border-0">
+                                    <div class="card ">
+                                            <div class="card-body">
+                                                <h4 class="card-title">League 8</h4>
+                                                <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum atque, harum voluptate quo, dolorem temporibus veniam delectus officia et veritatis eius. Repudiandae vero, neque beatae velit eveniet doloribus repellendus adipisci.</p>
+                                                <a href="#" class="btn btn-warning btn-lg active" role="button" aria-pressed="true">League page</a>
+                                            </div>
+                                        </div>
+                                </li>
                             {{#each dbLeague}}
                             <li class="list-group-item border-0">
                                 <div class="card ">
@@ -221,8 +300,9 @@
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-primary" id="create-leagueBtn">Save changes</button>
+                <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-info">Save changes</button>
+
             </div>
         </div>
     </div>
