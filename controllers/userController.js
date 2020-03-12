@@ -72,6 +72,68 @@ router.get("/league-search", function(req, res) {
   }
 });
 
+// Post route to create new league
+router.post("/api/add", function(req) {
+  console.log(req.body);
+  db.League.create({
+    league_name: req.body.formLeagueName,
+    sport: req.body.formSportName,
+    age_range: req.body.selectAge,
+    city: req.body.inputCity,
+    state: req.body.inputState,
+    location: req.body.inputLocation
+  }).then(function() {});
+});
+
+// Get route to leage-home page
+router.get("/api/leage-home/:id", function(req, res) {
+  console.log("click");
+  if (!req.user) {
+    res.redirect("/");
+  } else {
+    db.League.findOne({
+      where: {
+        id: req.params.id
+      }
+    }).then(function(dbLeague) {
+      res.render("league-search", {
+        dbLeague: dbLeague.map(e => {
+          // let saturatedAge;
+          // switch (e.age_range) {
+          //   case "1":
+          //     saturatedAge = "5-7";
+          //     break;
+          //   case "1":
+          //     saturatedAge = "8-10";
+          //     break;
+          //   case "2":
+          //     saturatedAge = "11-13";
+          //     break;
+          //   case "3":
+          //     saturatedAge = "14-17";
+          //     break;
+          //   case "4":
+          //     saturatedAge = "18+";
+          //     break;
+          //   default:
+          //     saturatedAge = "Senior";
+          //     break;
+          // }
+          // console.log(saturatedAge);
+          return {
+            league_name: e.league_name,
+            sport: e.sport,
+            age_range: e.age_range,
+            city: e.city,
+            state: e.state,
+            location: e.location
+          };
+        })
+      });
+    });
+  }
+});
+
 // Logs out user
 router.get("/logout", function(req, res) {
   req.logout();
