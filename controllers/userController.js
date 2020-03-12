@@ -6,17 +6,17 @@ const passport = require("../config/passport");
 const db = require("../models");
 
 // Home page route
-router.get("/", function (req, res) {
+router.get("/", function(req, res) {
   res.render("landing");
 });
 
 // Login route
-router.post("/", passport.authenticate("local"), function (req, res) {
+router.post("/", passport.authenticate("local"), function(req, res) {
   res.json(req.user);
 });
 
 // signup page get route
-router.get("/signup", function (req, res) {
+router.get("/signup", function(req, res) {
   res.render("signup");
 });
 
@@ -40,7 +40,7 @@ router.post("/api/signup", function(req, res) {
 });
 
 // Portal page route
-router.get("/portal", function (req, res) {
+router.get("/portal", function(req, res) {
   if (!req.user) {
     res.redirect("/");
   } else {
@@ -64,7 +64,6 @@ router.get("/league-search", function(req, res) {
     res.redirect("/");
   } else {
     db.League.findAll({}).then(function(dbLeague) {
-
       // res.json(dbLeague);
       // console.log(JSON.stringify(dbLeague, null, 2));
       res.render("league-search", {
@@ -75,8 +74,7 @@ router.get("/league-search", function(req, res) {
           age_range: e.age_range,
           city: e.city,
           state: e.state,
-          location: e.location,
-          id: e.id
+          location: e.location
         }))
       });
     });
@@ -85,7 +83,6 @@ router.get("/league-search", function(req, res) {
 
 // Post route to CREATE NEW LEAGUE
 router.post("/api/add", function(req) {
-
   console.log(req.body);
   db.League.create({
     league_name: req.body.formLeagueName,
@@ -94,13 +91,11 @@ router.post("/api/add", function(req) {
     city: req.body.inputCity,
     state: req.body.inputState,
     location: req.body.inputLocation
-
-  }).then(function () { });
+  }).then(function() {});
 });
 
 // Get route to league-home page
-router.get("/api/league-home/:id", function (req, res) {
-
+router.get("/api/league-home/:id", function(req, res) {
   if (!req.user) {
     res.redirect("/");
   } else {
@@ -108,8 +103,7 @@ router.get("/api/league-home/:id", function (req, res) {
       where: {
         id: req.params.id
       }
-
-    }).then(function (dbLeague) {
+    }).then(function(dbLeague) {
       console.log(dbLeague.dataValues);
       res.render("league-home", {
         dbLeague: dbLeague.dataValues
@@ -119,7 +113,7 @@ router.get("/api/league-home/:id", function (req, res) {
 });
 
 // Logs out user
-router.get("/logout", function (req, res) {
+router.get("/logout", function(req, res) {
   req.logout();
   res.redirect("/");
 });
