@@ -9,10 +9,6 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        league: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-        },
        
     //TIMESTAMPS
         createdAt: DataTypes.DATE,
