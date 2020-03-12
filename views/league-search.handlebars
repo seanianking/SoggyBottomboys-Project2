@@ -7,9 +7,9 @@
 </div>
 <div class="container-fluid d-flex h-100 flex-column my-4">
   <div class="row justify-content-center">
-    <div class="col-lg-2 mx-4" style="border: 2px solid red; ">
+    <div class="col-lg-2 mx-4 border rounded border-primary">
       <div class="row">
-        <div class="col p-2" style="background-color: #E9ECEF; border-bottom: 2px solid black;">
+        <div class="col p-2 border border-info">
           <h4>
             League Criteria
           </h4>
@@ -30,7 +30,7 @@
                   <div class="card">
                     <div class="card-header" id="headingOne">
                       <h2 class="mb-0">
-                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
+                        <button class="btn btn-info" type="button" data-toggle="collapse" data-target="#collapseOne"
                           aria-expanded="true" aria-controls="collapseOne">
                           Gender
                         </button>
@@ -50,7 +50,7 @@
                   <div class="card">
                     <div class="card-header" id="headingTwo">
                       <h2 class="mb-0">
-                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                        <button class="btn btn-info collapsed" type="button" data-toggle="collapse"
                           data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                           Sports
                         </button>
@@ -72,16 +72,16 @@
         </div>
       </div>
     </div>
-    <div class="col-lg-9 mx-4" style="border: 2px solid red;">
+    <div class="col-lg-9 mx-4 border rounded border-primary">
       <div class="row">
-        <div class="col p-2" style="background-color: #E9ECEF; border-bottom: 2px solid black;">
+        <div class="col p-2 border border-info">
           <h4>
             Leagues to Join:
           </h4>
         </div>
       </div>
 
-      <div class="row my-4 mx-3 py-2 px-3" style="border: 2px solid black;">
+      <div class="row my-4 mx-3 py-2 px-3 border rounded border-warning">
         <div class="col">
           <ul class="list-group list-group-horizontal align-items-stretch flex-wrap" id="searchCardArea">
             {{#each dbLeague}}
@@ -93,9 +93,9 @@
                   <p class="card-text">{{age_range}}</p>
                   <p class="card-text">{{city}}, {{state}}</p>
                   <p class="card-text">{{location}}</p>
-                  <button class="btn btn-secondary btn-lg active leaguePageBtn" role="button" aria-pressed="true">League
+                  <button class="btn btn-warning btn-lg active leaguePageBtn" role="button" aria-pressed="true">League
                     page</button>
-                  <button class="btn btn-info btn-lg" role="button" aria-pressed="true" data-toggle="modal"
+                  <button class="btn btn-warning btn-lg" role="button" aria-pressed="true" data-toggle="modal"
                     data-target="#exampleModal">Register</button>
                 </div>
               </div>
@@ -148,6 +148,6 @@
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
         <button type="button" class="btn btn-info">Save changes</button>
       </div>
