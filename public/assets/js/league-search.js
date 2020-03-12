@@ -11,6 +11,7 @@ $(document).ready(function() {
     }).then(function(resp) {
       console.log(resp);
       location.reload();
+      window.location.href = `/api/league-home/${id}`;
     });
   });
 });
