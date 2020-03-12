@@ -22,7 +22,11 @@ router.get("/signup", function(req, res) {
 
 // Signup page post route
 router.post("/api/signup", function(req, res) {
+  console.log(req.body);
   db.Users.create({
+    first_name: req.body.firstName,
+    last_name: req.body.lastName,
+    age: req.body.age,
     email: req.body.email,
     password: req.body.password
   })
@@ -43,6 +47,8 @@ router.get("/portal", function(req, res) {
   }
 });
 
+router.post("/portal");
+
 router.get("/league-home", function(req, res) {
   if (!req.user) {
     res.redirect("/");
@@ -51,6 +57,7 @@ router.get("/league-home", function(req, res) {
   }
 });
 
+/// Get Route will display all available leagues in league-seach page
 router.get("/league-search", function(req, res) {
   if (!req.user) {
     res.redirect("/");
@@ -60,6 +67,7 @@ router.get("/league-search", function(req, res) {
       // console.log(JSON.stringify(dbLeague, null, 2));
       res.render("league-search", {
         dbLeague: dbLeague.map(e => ({
+          id: e.id,
           league_name: e.league_name,
           sport: e.sport,
           age_range: e.age_range,
@@ -72,7 +80,7 @@ router.get("/league-search", function(req, res) {
   }
 });
 
-// Post route to create new league
+// Post route to CREATE NEW LEAGUE
 router.post("/api/add", function(req) {
   console.log(req.body);
   db.League.create({
@@ -82,11 +90,13 @@ router.post("/api/add", function(req) {
     city: req.body.inputCity,
     state: req.body.inputState,
     location: req.body.inputLocation
-  }).then(function() {});
+  }).then(function() {
+    /// need functionality to redirect to league-search page
+  });
 });
 
-// Get route to leage-home page
-router.get("/api/leage-home/:id", function(req, res) {
+// ////
+router.get("/api/league-home/:id", function(req, res) {
   console.log("click");
   if (!req.user) {
     res.redirect("/");
@@ -96,31 +106,11 @@ router.get("/api/leage-home/:id", function(req, res) {
         id: req.params.id
       }
     }).then(function(dbLeague) {
+      console.log(dbLeague);
       res.render("league-search", {
         dbLeague: dbLeague.map(e => {
-          // let saturatedAge;
-          // switch (e.age_range) {
-          //   case "1":
-          //     saturatedAge = "5-7";
-          //     break;
-          //   case "1":
-          //     saturatedAge = "8-10";
-          //     break;
-          //   case "2":
-          //     saturatedAge = "11-13";
-          //     break;
-          //   case "3":
-          //     saturatedAge = "14-17";
-          //     break;
-          //   case "4":
-          //     saturatedAge = "18+";
-          //     break;
-          //   default:
-          //     saturatedAge = "Senior";
-          //     break;
-          // }
-          // console.log(saturatedAge);
           return {
+            id: e.id,
             league_name: e.league_name,
             sport: e.sport,
             age_range: e.age_range,
