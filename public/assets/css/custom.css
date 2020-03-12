@@ -6721,6 +6721,10 @@ button.bg-dark:focus {
     width: 75% !important
 }
 
+.w-95 {
+    width: 95% !important
+}
+
 .w-100 {
     width: 100% !important
 }
@@ -8961,4 +8965,8 @@ li.leagueBullet::before {
     display: inline-block;
     width: 1em;
     margin-left: -1em
+}
+
+.bioPic {
+    font-size: larger;
 }
