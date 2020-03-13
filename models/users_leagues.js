@@ -1,4 +1,4 @@
-module.exports = function(sequelize, DataTypes) {
+module.exports = function(sequelize) {
   const UsersLeagues = sequelize.define("UsersLeagues", {
     // admin: {
     //   type: DataTypes.BOOLEAN,
