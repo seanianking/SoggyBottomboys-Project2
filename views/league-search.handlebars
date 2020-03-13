@@ -79,115 +79,30 @@
           </h4>
         </div>
       </div>
-
-      {{!-- <div class="row my-4 mx-3 py-2 px-3 border rounded border-warning">
-        <div class="col">
-          <ul class="list-group list-group-horizontal align-items-stretch flex-wrap" id="searchCardArea">
-            {{#each dbLeague}}
-            <li class="list-group-item border-0">
-              <div class="card">
+      <div class="row">
+        {{#each dbLeague}}
+        <div class="col-lg-4">
+          <ul class="list-group list-group-horizontal flex-wrap" id="searchCardArea">
+            <li class="list-group-item p-0 w-100 border-0">
+              <div class="card border rounded border-info mt-3">
                 <div class="card-body">
-                  <h4 class="card-title">{{league_name}}</h4>
-                  <p class="card-text">{{sport}}</p>
-                  <p class="card-text">{{age_range}}</p>
-                  <p class="card-text">{{city}}, {{state}}</p>
-                  <p class="card-text">{{location}}</p>
-
-                  <button class="btn btn-warning btn-lg active leaguePageBtn" role="button" aria-pressed="true">League
+                  <h2 class="card-title py-1 stronger">{{league_name}}</h2>
+                  <h3 class="card-text py-1">{{{sport}}</h3>
+                  <h3 class="card-text py-1">{{age_range}}</h3>
+                  <h3 class="card-text py-1">{{city, state}}</h3>
+                  <h3 class="card-text py-1">{{{location}}</h3>
+                  <br>
+                  <button class="btn btn-warning btn-md" role="button" aria-pressed="true">League
                     page</button>
-                  <button class="btn btn-warning btn-lg" role="button" aria-pressed="true" data-toggle="modal"
+                  <button class="btn btn-warning btn-md" role="button" aria-pressed="true" data-toggle="modal"
                     data-target="#exampleModal">Register</button>
                 </div>
               </div>
             </li>
-            {{/each}}
           </ul>
         </div>
-      </div> --}}
-      <div class="row">
-        <div class="col-lg-4">
-        <ul class="list-group list-group-horizontal flex-wrap" id="searchCardArea">
-          <li class="list-group-item p-0 w-100 border-0">
-            <div class="card border rounded border-info mt-3">
-              <div class="card-body">
-                <h2 class="card-title py-1 stronger">league_name</h2>
-                <h3 class="card-text py-1">sport</h3>
-                <h3 class="card-text py-1">age_range</h3>
-                <h3 class="card-text py-1">city, state</h3>
-                <h3 class="card-text py-1">location</h3>
-                <br>
-                <button class="btn btn-warning btn-md" role="button" aria-pressed="true">League
-                  page</button>
-                <button class="btn btn-warning btn-md" role="button" aria-pressed="true" data-toggle="modal"
-                  data-target="#exampleModal">Register</button>
-              </div>
-            </div>
-          </li>
-        </ul>
-        </div>
-        <div class="col-lg-4">
-        <ul class="list-group list-group-horizontal flex-wrap" id="searchCardArea">
-          <li class="list-group-item w-100 border-0">
-            <div class="card border rounded my-3 border-info">
-              <div class="card-body">
-                <h2 class="card-title stronger">league_name</h2>
-                <h3 class="card-text">sport</h3>
-                <h3 class="card-text">age_range</h3>
-                <h3 class="card-text">city, state</h3>
-                <h3 class="card-text">location</h3>
-                <button class="btn btn-warning btn-md" role="button" aria-pressed="true">League
-                  page</button>
-                <button class="btn btn-warning btn-md" role="button" aria-pressed="true" data-toggle="modal"
-                  data-target="#exampleModal">Register</button>
-              </div>
-            </div>
-          </li>
-        </ul>
-        </div>
-        <div class="col-lg-4">
-        <ul class="list-group list-group-horizontal flex-wrap" id="searchCardArea">
-          <li class="list-group-item w-100 border-0">
-            <div class="card border rounded my-3 border-info">
-              <div class="card-body">
-                <h2 class="card-title stronger">league_name</h2>
-                <h3 class="card-text">sport</h3>
-                <h3 class="card-text">age_range</h3>
-                <h3 class="card-text">city, state</h3>
-                <h3 class="card-text">location</h3>
-                <button class="btn btn-warning btn-md" role="button" aria-pressed="true">League
-                  page</button>
-                <button class="btn btn-warning btn-md" role="button" aria-pressed="true" data-toggle="modal"
-                  data-target="#exampleModal">Register</button>
-              </div>
-            </div>
-          </li>
-        </ul>
-        </div>
-        <div class="col-lg-4">
-        <ul class="list-group list-group-horizontal flex-wrap" id="searchCardArea">
-          <li class="list-group-item w-100 border-0">
-            <div class="card border rounded my-3 border-info">
-              <div class="card-body">
-                <h2 class="card-title stronger">league_name</h2>
-                <h3 class="card-text">sport</h3>
-                <h3 class="card-text">age_range</h3>
-                <h3 class="card-text">city, state</h3>
-                <h3 class="card-text">location</h3>
-                <button class="btn btn-warning btn-md" role="button" aria-pressed="true">League
-                  page</button>
-                <button class="btn btn-warning btn-md" role="button" aria-pressed="true" data-toggle="modal"
-                  data-target="#exampleModal">Register</button>
-              </div>
-            </div>
-          </li>
-        </ul>
-        </div>
-
+      {{/each}}
       </div>
-
-
-
-
     </div>
   </div>
 </div>
