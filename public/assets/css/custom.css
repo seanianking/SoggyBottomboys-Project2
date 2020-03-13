@@ -8970,3 +8970,8 @@ li.leagueBullet::before {
 .bioPic {
     font-size: larger;
 }
+
+.aboutimage {
+    width: 300px !important;
+    height: 410px !important;
+}

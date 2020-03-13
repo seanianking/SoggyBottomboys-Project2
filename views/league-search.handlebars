@@ -86,16 +86,23 @@
             <li class="list-group-item p-0 w-100 border-0">
               <div class="card border rounded border-info mt-3">
                 <div class="card-body">
-                  <h2 class="card-title py-1 stronger">{{league_name}}</h2>
-                  <h3 class="card-text py-1">{{{sport}}</h3>
-                  <h3 class="card-text py-1">{{age_range}}</h3>
-                  <h3 class="card-text py-1">{{city, state}}</h3>
-                  <h3 class="card-text py-1">{{{location}}</h3>
-                  <br>
-                  <button class="btn btn-warning btn-md" role="button" aria-pressed="true">League
-                    page</button>
-                  <button class="btn btn-warning btn-md" role="button" aria-pressed="true" data-toggle="modal"
-                    data-target="#exampleModal">Register</button>
+
+                  <h4 class="card-title">{{league_name}}</h4>
+                  <p class="card-text">{{sport}}</p>
+                  <p class="card-text">{{age_range}}</p>
+                  <p class="card-text">{{city}}, {{state}}</p>
+                  <p class="card-text">{{location}}</p>
+
+
+                  <button data-id="{{id}}" href="/league-home/{{this.id}}"
+                    class="btn btn-warning btn-lg active leaguePageBtn" role="button" aria-pressed="true">League home</button>
+
+
+                    {{!-- <button class="btn btn-warning btn-lg active leaguePageBtn" role="button" aria-pressed="true">League
+
+                      page</button> --}}
+                    <button data-id="{{id}}" class=" btn btn-warning btn-lg registerBtn" role="button"
+                      aria-pressed="true">Register</button>
                 </div>
               </div>
             </li>
