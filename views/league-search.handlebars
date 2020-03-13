@@ -1,22 +1,22 @@
 <link rel="stylesheet" href="./../assets/css/custom.css" type="text/css" />
 <div class="jumbotron jumbotron-fluid my-0 py-4 bg-light">
   <div class="container">
-    <h1 class="display-3">Search for a league</h1>
+    <h1 class="display-3">Search for a League</h1>
     <hr class="my-2">
   </div>
 </div>
-<div class="container-fluid d-flex h-100 flex-column my-4">
-  <div class="row justify-content-center">
+<div class="container-fluid d-flex h-100 flex-column my-4 ">
+  <div class="row justify-content-center ">
     <div class="col-lg-2 mx-4 border rounded border-primary">
       <div class="row">
         <div class="col p-2 border-bottom border-primary">
           <h4>
-            League Criteria
+            League Criteria:
           </h4>
         </div>
       </div>
 
-      <div class="row justify-content-center py-4">
+      <div class="row justify-content-center py-4 ">
         <div class="col-md-10">
           <form action="">
             <div class="row">
@@ -75,18 +75,18 @@
       <div class="row">
         <div class="col p-2 border-bottom border-primary">
           <h4>
-            Leagues to Join:
+            Leagues to Join: 
           </h4>
         </div>
       </div>
-
-      <div class="row my-4 mx-3 py-2 px-3 border rounded border-warning">
-        <div class="col">
-          <ul class="list-group list-group-horizontal align-items-stretch flex-wrap" id="searchCardArea">
-            {{#each dbLeague}}
-            <li class="list-group-item border-0">
-              <div class="card">
+      <div class="row">
+        {{#each dbLeague}}
+        <div class="col-lg-4">
+          <ul class="list-group list-group-horizontal flex-wrap" id="searchCardArea">
+            <li class="list-group-item p-0 w-100 border-0">
+              <div class="card border rounded border-info mt-3">
                 <div class="card-body">
+
                   <h4 class="card-title">{{league_name}}</h4>
                   <p class="card-text">{{sport}}</p>
                   <p class="card-text">{{age_range}}</p>
@@ -103,13 +103,12 @@
                       page</button> --}}
                     <button data-id="{{id}}" class=" btn btn-warning btn-lg registerBtn" role="button"
                       aria-pressed="true">Register</button>
-
                 </div>
               </div>
             </li>
-            {{/each}}
           </ul>
         </div>
+      {{/each}}
       </div>
     </div>
   </div>

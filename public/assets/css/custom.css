@@ -3646,8 +3646,8 @@ input[type="button"].btn-block {
     flex-direction: column;
     min-width: 0;
     word-wrap: break-word;
-    background-color: #fff;
-    background-clip: border-box;
+    background-color: #f5f5f5;
+    /* background-clip: border-box; */
     border: 0
 }
 
@@ -4418,7 +4418,7 @@ a.badge-dark.focus {
     display: block;
     padding: 0 0;
     margin-bottom: -3px;
-    background-color: #fff;
+    /* background-color: #fff; */
     border: 3px solid rgba(0, 0, 0, 0.125);
     width: 100%;
 }
@@ -4438,7 +4438,7 @@ a.badge-dark.focus {
 .list-group-item:disabled {
     color: #6c757d;
     pointer-events: none;
-    background-color: #fff
+    /* background-color: #fff */
 }
 
 .list-group-item.active {
@@ -8920,7 +8920,7 @@ a.text-dark:focus {
     }
 }
 
-#stronger {
+.stronger {
     font-weight: bolder;
 }
 
