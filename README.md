@@ -9,6 +9,18 @@ User stories
 
 
 
-    # Soggy Bottom League Manager
+# Soggy Bottom League Manager
 
 Our site is a league manager for local recreation sports groups.
+
+### link to the deployed website
+- https://soggybottomleaguemanager.herokuapp.com/
+
+## Contents
+* Landing Page
+![screenshot]()
+* About Page
+![screenshot]()
+* Contact Page
+![screenshot]()
+
