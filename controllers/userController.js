@@ -48,15 +48,15 @@ router.get("/portal", function(req, res) {
   }
 });
 
-router.post("/portal");
+// router.post("/portal");
 
-router.get("/league-home", function(req, res) {
-  if (!req.user) {
-    res.redirect("/");
-  } else {
-    res.render("league-home");
-  }
-});
+// router.get("/league-home", function(req, res) {
+//   if (!req.user) {
+//     res.redirect("/");
+//   } else {
+//     res.render("league-home");
+//   }
+// });
 
 /// Get Route will display all available leagues in league-seach page
 router.get("/league-search", function(req, res) {
@@ -92,6 +92,11 @@ router.post("/api/add", function(req) {
     state: req.body.inputState,
     location: req.body.inputLocation
   }).then(function() {});
+});
+
+// Post route to portal page when registering for league
+router.post("/api/register/:id", function(req, res) {
+  db.UsersLeagues.create({});
 });
 
 // Get route to league-home page
