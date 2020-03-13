@@ -1,3 +1,4 @@
+$(document).ready(function() {
 $('#announceInfo').on("click", function(){
     $('#announce-div').removeClass('hide');
 
@@ -29,3 +30,5 @@ $('#ownerInfo').on("click", function(){
     $('#part-div').addClass('hide');
     $('#announce-div').addClass('hide');
 })
+
+});

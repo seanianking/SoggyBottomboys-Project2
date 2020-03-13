@@ -22,7 +22,12 @@ router.get("/signup", function(req, res) {
 
 // Signup page post route
 router.post("/api/signup", function(req, res) {
+  console.log(req.body);
+
   db.Users.create({
+    first_name: req.body.firstName,
+    last_name: req.body.lastName,
+    age: req.body.age,
     email: req.body.email,
     password: req.body.password
   })
@@ -43,14 +48,17 @@ router.get("/portal", function(req, res) {
   }
 });
 
-router.get("/league-home", function(req, res) {
-  if (!req.user) {
-    res.redirect("/");
-  } else {
-    res.render("league-home");
-  }
-});
+// router.post("/portal");
 
+// router.get("/league-home", function(req, res) {
+//   if (!req.user) {
+//     res.redirect("/");
+//   } else {
+//     res.render("league-home");
+//   }
+// });
+
+/// Get Route will display all available leagues in league-seach page
 router.get("/league-search", function(req, res) {
   if (!req.user) {
     res.redirect("/");
@@ -60,6 +68,7 @@ router.get("/league-search", function(req, res) {
       // console.log(JSON.stringify(dbLeague, null, 2));
       res.render("league-search", {
         dbLeague: dbLeague.map(e => ({
+          id: e.id,
           league_name: e.league_name,
           sport: e.sport,
           age_range: e.age_range,
@@ -72,7 +81,7 @@ router.get("/league-search", function(req, res) {
   }
 });
 
-// Post route to create new league
+// Post route to CREATE NEW LEAGUE
 router.post("/api/add", function(req) {
   console.log(req.body);
   db.League.create({
@@ -85,9 +94,17 @@ router.post("/api/add", function(req) {
   }).then(function() {});
 });
 
-// Get route to leage-home page
-router.get("/api/leage-home/:id", function(req, res) {
-  console.log("click");
+// Post route to portal page when registering for league
+router.post("/api/register/:id", function(req) {
+  console.log(req.user);
+  db.UsersLeagues.create({
+    LeagueId: req.params.id,
+    UserId: req.user.id
+  });
+});
+
+// Get route to league-home page
+router.get("/league-home/:id", function(req, res) {
   if (!req.user) {
     res.redirect("/");
   } else {
@@ -96,39 +113,10 @@ router.get("/api/leage-home/:id", function(req, res) {
         id: req.params.id
       }
     }).then(function(dbLeague) {
-      res.render("league-search", {
-        dbLeague: dbLeague.map(e => {
-          // let saturatedAge;
-          // switch (e.age_range) {
-          //   case "1":
-          //     saturatedAge = "5-7";
-          //     break;
-          //   case "1":
-          //     saturatedAge = "8-10";
-          //     break;
-          //   case "2":
-          //     saturatedAge = "11-13";
-          //     break;
-          //   case "3":
-          //     saturatedAge = "14-17";
-          //     break;
-          //   case "4":
-          //     saturatedAge = "18+";
-          //     break;
-          //   default:
-          //     saturatedAge = "Senior";
-          //     break;
-          // }
-          // console.log(saturatedAge);
-          return {
-            league_name: e.league_name,
-            sport: e.sport,
-            age_range: e.age_range,
-            city: e.city,
-            state: e.state,
-            location: e.location
-          };
-        })
+      
+      console.log(dbLeague.dataValues);
+      res.render("league-home", {
+        dbLeague: dbLeague.dataValues
       });
     });
   }
