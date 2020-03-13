@@ -1470,7 +1470,7 @@ textarea.form-control.is-invalid {
 .btn:focus,
 .btn.focus {
     outline: 0;
-    box-shadow: 0 0 0 .2rem #ffcc00
+    box-shadow: 0 0 0 .2rem #2eaed3
 }
 
 .btn.disabled,
@@ -3648,8 +3648,7 @@ input[type="button"].btn-block {
     word-wrap: break-word;
     background-color: #fff;
     background-clip: border-box;
-    border: 3px solid rgba(0, 0, 0, 0.125);
-    border-radius: .25rem
+    border: 0
 }
 
 .card>hr {
@@ -3697,7 +3696,7 @@ input[type="button"].btn-block {
     padding: .75rem 1.25rem;
     margin-bottom: 0;
     background-color: rgba(0, 0, 0, 0.03);
-    border-bottom: 3px solid rgba(0, 0, 0, 0.125)
+    /* border-bottom: 3px solid rgba(0, 0, 0, 0.125) */
 }
 
 .card-header:first-child {
@@ -6722,6 +6721,10 @@ button.bg-dark:focus {
     width: 75% !important
 }
 
+.w-95 {
+    width: 95% !important
+}
+
 .w-100 {
     width: 100% !important
 }
@@ -8962,4 +8965,8 @@ li.leagueBullet::before {
     display: inline-block;
     width: 1em;
     margin-left: -1em
+}
+
+.bioPic {
+    font-size: larger;
 }
