@@ -100,7 +100,7 @@ router.post("/api/add", function(req) {
 // });
 
 // Get route to league-home page
-router.get("/api/league-home/:id", function(req, res) {
+router.get("/league-home/:id", function(req, res) {
   if (!req.user) {
     res.redirect("/");
   } else {
@@ -109,6 +109,7 @@ router.get("/api/league-home/:id", function(req, res) {
         id: req.params.id
       }
     }).then(function(dbLeague) {
+      
       console.log(dbLeague.dataValues);
       res.render("league-home", {
         dbLeague: dbLeague.dataValues

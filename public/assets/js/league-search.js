@@ -6,12 +6,12 @@ $(document).ready(function() {
     let id = $(this).attr("data-id");
 
     console.log(id);
-    $.ajax("/api/league-home/" + id, {
+    $.ajax("/league-home/" + id, {
       type: "GET"
     }).then(function(resp) {
       console.log(resp);
       location.reload();
-      window.location.href = `/api/league-home/${id}`;
+      window.location.href = `/league-home/${id}`;
     });
   });
 
