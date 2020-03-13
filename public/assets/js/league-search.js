@@ -27,7 +27,7 @@ $(document).ready(function() {
     }).then(function(resp) {
       console.log(resp);
       location.reload();
-      window.location.href = `/api/portal/${id}`;
+      window.location.href = `/api/portal/${regId}`;
     });
   });
 });

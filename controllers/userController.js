@@ -95,9 +95,9 @@ router.post("/api/add", function(req) {
 });
 
 // Post route to portal page when registering for league
-router.post("/api/register/:id", function(req, res) {
-  db.UsersLeagues.create({});
-});
+// router.post("/api/register/:id", function(req, res) {
+//   db.UsersLeagues.create({});
+// });
 
 // Get route to league-home page
 router.get("/api/league-home/:id", function(req, res) {
