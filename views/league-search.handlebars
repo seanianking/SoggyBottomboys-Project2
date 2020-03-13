@@ -1,22 +1,22 @@
 <link rel="stylesheet" href="./../assets/css/custom.css" type="text/css" />
 <div class="jumbotron jumbotron-fluid my-0 py-4 bg-light">
   <div class="container">
-    <h1 class="display-3">Search for a league</h1>
+    <h1 class="display-3">Search for a League</h1>
     <hr class="my-2">
   </div>
 </div>
-<div class="container-fluid d-flex h-100 flex-column my-4">
-  <div class="row justify-content-center">
+<div class="container-fluid d-flex h-100 flex-column my-4 ">
+  <div class="row justify-content-center ">
     <div class="col-lg-2 mx-4 border rounded border-primary">
       <div class="row">
         <div class="col p-2 border-bottom border-primary">
           <h4>
-            League Criteria
+            League Criteria:
           </h4>
         </div>
       </div>
 
-      <div class="row justify-content-center py-4">
+      <div class="row justify-content-center py-4 ">
         <div class="col-md-10">
           <form action="">
             <div class="row">
@@ -80,7 +80,7 @@
         </div>
       </div>
 
-      <div class="row my-4 mx-3 py-2 px-3 border rounded border-warning">
+      {{!-- <div class="row my-4 mx-3 py-2 px-3 border rounded border-warning">
         <div class="col">
           <ul class="list-group list-group-horizontal align-items-stretch flex-wrap" id="searchCardArea">
             {{#each dbLeague}}
@@ -103,10 +103,95 @@
             {{/each}}
           </ul>
         </div>
+      </div> --}}
+      <div class="row">
+        <div class="col-lg-4">
+        <ul class="list-group list-group-horizontal flex-wrap" id="searchCardArea">
+          <li class="list-group-item p-0 w-100 border-0">
+            <div class="card border rounded border-info mt-3">
+              <div class="card-body">
+                <h2 class="card-title py-1 stronger">league_name</h2>
+                <h3 class="card-text py-1">sport</h3>
+                <h3 class="card-text py-1">age_range</h3>
+                <h3 class="card-text py-1">city, state</h3>
+                <h3 class="card-text py-1">location</h3>
+                <br>
+                <button class="btn btn-warning btn-md" role="button" aria-pressed="true">League
+                  page</button>
+                <button class="btn btn-warning btn-md" role="button" aria-pressed="true" data-toggle="modal"
+                  data-target="#exampleModal">Register</button>
+              </div>
+            </div>
+          </li>
+        </ul>
+        </div>
+        <div class="col-lg-4">
+        <ul class="list-group list-group-horizontal flex-wrap" id="searchCardArea">
+          <li class="list-group-item w-100 border-0">
+            <div class="card border rounded my-3 border-info">
+              <div class="card-body">
+                <h2 class="card-title stronger">league_name</h2>
+                <h3 class="card-text">sport</h3>
+                <h3 class="card-text">age_range</h3>
+                <h3 class="card-text">city, state</h3>
+                <h3 class="card-text">location</h3>
+                <button class="btn btn-warning btn-md" role="button" aria-pressed="true">League
+                  page</button>
+                <button class="btn btn-warning btn-md" role="button" aria-pressed="true" data-toggle="modal"
+                  data-target="#exampleModal">Register</button>
+              </div>
+            </div>
+          </li>
+        </ul>
+        </div>
+        <div class="col-lg-4">
+        <ul class="list-group list-group-horizontal flex-wrap" id="searchCardArea">
+          <li class="list-group-item w-100 border-0">
+            <div class="card border rounded my-3 border-info">
+              <div class="card-body">
+                <h2 class="card-title stronger">league_name</h2>
+                <h3 class="card-text">sport</h3>
+                <h3 class="card-text">age_range</h3>
+                <h3 class="card-text">city, state</h3>
+                <h3 class="card-text">location</h3>
+                <button class="btn btn-warning btn-md" role="button" aria-pressed="true">League
+                  page</button>
+                <button class="btn btn-warning btn-md" role="button" aria-pressed="true" data-toggle="modal"
+                  data-target="#exampleModal">Register</button>
+              </div>
+            </div>
+          </li>
+        </ul>
+        </div>
+        <div class="col-lg-4">
+        <ul class="list-group list-group-horizontal flex-wrap" id="searchCardArea">
+          <li class="list-group-item w-100 border-0">
+            <div class="card border rounded my-3 border-info">
+              <div class="card-body">
+                <h2 class="card-title stronger">league_name</h2>
+                <h3 class="card-text">sport</h3>
+                <h3 class="card-text">age_range</h3>
+                <h3 class="card-text">city, state</h3>
+                <h3 class="card-text">location</h3>
+                <button class="btn btn-warning btn-md" role="button" aria-pressed="true">League
+                  page</button>
+                <button class="btn btn-warning btn-md" role="button" aria-pressed="true" data-toggle="modal"
+                  data-target="#exampleModal">Register</button>
+              </div>
+            </div>
+          </li>
+        </ul>
+        </div>
+
       </div>
+
+
+
+
     </div>
   </div>
 </div>
+
 
 
 
