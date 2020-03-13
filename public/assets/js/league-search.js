@@ -17,17 +17,19 @@ $(document).ready(function() {
 
   $(".registerBtn").on("click", function(event) {
     console.log("click");
+
     event.preventDefault();
 
-    let regId = $(this).attr("data-id");
+    let id = $(this).attr("data-id");
+    // let UserId = user;
 
-    console.log(regId);
-    $.ajax("/api/register/" + regId, {
+    console.log(id);
+    $.ajax("/api/register/" + id, {
       type: "POST"
     }).then(function(resp) {
       console.log(resp);
       location.reload();
-      window.location.href = `/api/portal/${regId}`;
+      // window.location.href = `/portal/${id}`;
     });
   });
 });

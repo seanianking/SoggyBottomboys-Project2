@@ -1,9 +1,9 @@
 module.exports = function(sequelize, DataTypes) {
   const UsersLeagues = sequelize.define("UsersLeagues", {
-    admin: {
-      type: DataTypes.BOOLEAN,
-      allowNull: false
-    }
+    // admin: {
+    //   type: DataTypes.BOOLEAN,
+    //   allowNull: false
+    // }
   });
   UsersLeagues.associate = models => {
     UsersLeagues.belongsTo(models.Users);
