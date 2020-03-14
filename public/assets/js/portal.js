@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  var message = document.getElementById("message");
   $(".carousel").carousel("pause");
   $(".toManagedLeagues").on("click", function() {
     console.log("To Managed leagues clicked");
@@ -66,5 +67,9 @@ $(document).ready(function() {
         // location.reload();
       });
     }
+  });
+
+  $("#create-leagueBtn").click(function() {
+    setTimeout("$('#popup-modal').modal('hide');", 2000);
   });
 });

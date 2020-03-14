@@ -3,6 +3,7 @@
 
     <div class="container">
         <h1 class="display-3">Your Portal</h1>
+        {{!-- <h3 id="message"></h3> --}}
         <hr class="my-2">
     </div>
 </div>
@@ -52,7 +53,6 @@
                         <li class="list-group-item border-0">
                             <div class="card border rounded border-info ">
                                 <div class="card-body">
-
                                 <h4 class="card-title">{{league_name}}</h4>
                                 <p class="card-text"> Sport: {{sport}}</p>
                                 <p class="card-text"> Age: {{age_range}}</p>
@@ -330,8 +330,19 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
-                <button id="create-leagueBtn" type=" button" class="btn btn-info">Save changes</button>
+                <button id="create-leagueBtn" type=" button" class="btn btn-info" data-dismiss="modal"
+                    data-toggle="modal" data-target="#popup-modal">Save
+                    changes</button>
+            </div>
+        </div>
+    </div>
+</div>
 
+<div class="modal fade" id="popup-modal">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">League Added!</h4>
             </div>
         </div>
     </div>

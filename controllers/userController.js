@@ -47,9 +47,11 @@ router.get("/portal", function(req, res) {
     db.UsersLeagues.findAll({
       where: {
         UserId: req.user.id
+
       }, 
       include: [db.League]
     }).then(function(dbLeague){
+
       // res.json(dbLeague);
       res.render("portal", {
         dbLeague: dbLeague.map(e => ({
@@ -64,20 +66,10 @@ router.get("/portal", function(req, res) {
       });
       console.log(dbLeague);
 
-
     })
+
   }
 });
-
-// router.post("/portal");
-
-// router.get("/league-home", function(req, res) {
-//   if (!req.user) {
-//     res.redirect("/");
-//   } else {
-//     res.render("league-home");
-//   }
-// });
 
 /// Get Route will display all available leagues in league-seach page
 router.get("/league-search", function(req, res) {
