@@ -44,21 +44,28 @@ router.get("/portal", function(req, res) {
   if (!req.user) {
     res.redirect("/");
   } else {
-    // db.UsersLeagues.findAll({}).then(dbLeague => {
-    //   res.render("portal", {
-    //     dbLeague: dbLeague.map(e => ({
-    //       id: e.id,
-    //       league_name: e.league_name,
-    //       sport: e.sport,
-    //       age_range: e.age_range,
-    //       city: e.city,
-    //       state: e.state,
-    //       location: e.location
-    //     }))
-    //   });
-    //   console.log(dbLeague);
-    // });
-    res.render("portal");
+    db.UsersLeagues.findAll({
+      where: {
+        UserId: req.user.id
+      }, 
+      include: [db.League]
+    }).then(function(dbLeague){
+      // res.json(dbLeague);
+      res.render("portal", {
+        dbLeague: dbLeague.map(e => ({
+          id: e.League.id,
+          league_name: e.League.league_name,
+          sport: e.League.sport,
+          age_range: e.League.age_range,
+          city: e.League.city,
+          state: e.League.state,
+          location: e.League.location
+        }))
+      });
+      console.log(dbLeague);
+
+
+    })
   }
 });
 
