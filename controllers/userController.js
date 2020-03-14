@@ -127,6 +127,7 @@ router.post("/api/register/:id", function(req) {
         });
       } else {
         console.log("You are already registered for that league!");
+        
       }
     } )
   }
