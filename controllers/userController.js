@@ -44,7 +44,10 @@ router.get("/portal", function(req, res) {
   if (!req.user) {
     res.redirect("/");
   } else {
-    res.render("portal");
+    db.UsersLeagues.findAll({}).then(dbLeague => {
+      console.log(dbLeague.LeagueId);
+      res.render("portal");
+    });
   }
 });
 
@@ -113,7 +116,6 @@ router.get("/league-home/:id", function(req, res) {
         id: req.params.id
       }
     }).then(function(dbLeague) {
-      
       console.log(dbLeague.dataValues);
       res.render("league-home", {
         dbLeague: dbLeague.dataValues
