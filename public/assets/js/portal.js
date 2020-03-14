@@ -1,5 +1,4 @@
 $(document).ready(function() {
-  var message = document.getElementById("message");
   $(".carousel").carousel("pause");
   $(".toManagedLeagues").on("click", function() {
     console.log("To Managed leagues clicked");
