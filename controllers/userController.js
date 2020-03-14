@@ -47,9 +47,11 @@ router.get("/portal", function(req, res) {
     db.UsersLeagues.findAll({
       where: {
         UserId: req.user.id
-      },
+
+      }, 
       include: [db.League]
-    }).then(function(dbLeague) {
+    }).then(function(dbLeague){
+
       // res.json(dbLeague);
       res.render("portal", {
         dbLeague: dbLeague.map(e => ({
@@ -63,7 +65,9 @@ router.get("/portal", function(req, res) {
         }))
       });
       console.log(dbLeague);
-    });
+
+    })
+
   }
 });
 
