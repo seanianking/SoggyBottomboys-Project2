@@ -32,7 +32,7 @@ router.post("/api/signup", function(req, res) {
     password: req.body.password
   })
     .then(() => {
-      res.redirect("/");
+      res.redirect("/portal");
     })
     .catch(err => {
       res.status(401).json(err);
