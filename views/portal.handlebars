@@ -53,20 +53,21 @@
                         <li class="list-group-item border-0">
                             <div class="card border rounded border-info ">
                                 <div class="card-body">
-                                <h4 class="card-title">{{league_name}}</h4>
-                                <p class="card-text"> Sport: {{sport}}</p>
-                                <p class="card-text"> Age: {{age_range}}</p>
-                                <p class="card-text"> City/State: {{city}}, {{state}}</p>
-                                <p class="card-text"> Location: {{location}}</p>
+                                    <h4 class="card-title">{{league_name}}</h4>
+                                    <p class="card-text"> Sport: {{sport}}</p>
+                                    <p class="card-text"> Age: {{age_range}}</p>
+                                    <p class="card-text"> City/State: {{city}}, {{state}}</p>
+                                    <p class="card-text"> Location: {{location}}</p>
 
-                                <button data-id="{{id}}" href="/league-home/{{this.id}}"
-                                    class="btn btn-warning btn-lg active leaguePageBtn" role="button" aria-pressed="true">League home</button>
+                                    <button data-id="{{id}}" href="/league-home/{{this.id}}"
+                                        class="btn btn-warning btn-lg active leaguePageBtn" role="button"
+                                        aria-pressed="true">League home</button>
 
                                 </div>
                             </div>
-                            </li>
+                        </li>
                         {{/each}}
-                        
+
                         {{!-- {{#each dbLeague}}
                         <li class="list-group-item border-0">
                             <div class="card border border-primary">
