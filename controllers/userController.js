@@ -44,6 +44,20 @@ router.get("/portal", function(req, res) {
   if (!req.user) {
     res.redirect("/");
   } else {
+    // db.UsersLeagues.findAll({}).then(dbLeague => {
+    //   res.render("portal", {
+    //     dbLeague: dbLeague.map(e => ({
+    //       id: e.id,
+    //       league_name: e.league_name,
+    //       sport: e.sport,
+    //       age_range: e.age_range,
+    //       city: e.city,
+    //       state: e.state,
+    //       location: e.location
+    //     }))
+    //   });
+    //   console.log(dbLeague);
+    // });
     res.render("portal");
   }
 });
@@ -113,7 +127,6 @@ router.get("/league-home/:id", function(req, res) {
         id: req.params.id
       }
     }).then(function(dbLeague) {
-      
       console.log(dbLeague.dataValues);
       res.render("league-home", {
         dbLeague: dbLeague.dataValues
