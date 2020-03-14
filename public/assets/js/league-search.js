@@ -32,4 +32,8 @@ $(document).ready(function() {
       // window.location.href = `/portal/${id}`;
     });
   });
+  $(".registerBtn").click(function() {
+    setTimeout("$('#reg-modal').modal('hide');", 2000);
+
+  });
 });

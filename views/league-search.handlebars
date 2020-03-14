@@ -102,13 +102,23 @@
 
                       page</button> --}}
                     <button data-id="{{id}}" class=" btn btn-warning btn-lg registerBtn" role="button"
-                      aria-pressed="true">Register</button>
+                      aria-pressed="true" data-toggle="modal" data-target="#reg-modal">Register</button>
                 </div>
               </div>
             </li>
           </ul>
         </div>
       {{/each}}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="reg-modal">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Registered for league!</h4>
       </div>
     </div>
   </div>
