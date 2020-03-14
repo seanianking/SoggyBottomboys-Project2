@@ -115,13 +115,31 @@ router.post("/api/add", function(req) {
   }).then(function() {});
 });
 
+
+
 // Post route to portal page when registering for league
 router.post("/api/register/:id", function(req) {
   console.log(req.user);
-  db.UsersLeagues.create({
-    LeagueId: req.params.id,
-    UserId: req.user.id
-  });
+
+  function checkRegister(LeagueId, UserId){
+    db.UsersLeagues.findOne({
+      where: {
+        LeagueId: LeagueId,
+        UserId: UserId
+      }
+    }).then( dbUsersLeagues => {
+      if(!dbUsersLeagues){
+        db.UsersLeagues.create({
+          LeagueId: req.params.id,
+          UserId: req.user.id
+        });
+      } else {
+        console.log("You are already registered for that league!");
+      }
+    } )
+  }
+  checkRegister(req.params.id, req.user.id);
+ 
 });
 
 // Get route to league-home page
