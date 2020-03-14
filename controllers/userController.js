@@ -44,22 +44,28 @@ router.get("/portal", function(req, res) {
   if (!req.user) {
     res.redirect("/");
   } else {
-    db.UsersLeagues.findAll({}).then(dbLeague => {
-      console.log(dbLeague.LeagueId);
-      res.render("portal");
+    db.UsersLeagues.findAll({
+      where: {
+        UserId: req.user.id
+      },
+      include: [db.League]
+    }).then(function(dbLeague) {
+      // res.json(dbLeague);
+      res.render("portal", {
+        dbLeague: dbLeague.map(e => ({
+          id: e.League.id,
+          league_name: e.League.league_name,
+          sport: e.League.sport,
+          age_range: e.League.age_range,
+          city: e.League.city,
+          state: e.League.state,
+          location: e.League.location
+        }))
+      });
+      console.log(dbLeague);
     });
   }
 });
-
-// router.post("/portal");
-
-// router.get("/league-home", function(req, res) {
-//   if (!req.user) {
-//     res.redirect("/");
-//   } else {
-//     res.render("league-home");
-//   }
-// });
 
 /// Get Route will display all available leagues in league-seach page
 router.get("/league-search", function(req, res) {
